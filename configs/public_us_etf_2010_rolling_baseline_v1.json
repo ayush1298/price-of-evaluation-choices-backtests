@@ -1,0 +1,32 @@
+{
+  "experiment_name": "public-us-etf-2010-two-calendar-year-rolling-baseline-matrix-v1",
+  "study_scope": "public_fixed_etf_exploratory",
+  "paper_eligible": false,
+  "base_config": "configs/public_us_etf_2010_monthly.json",
+  "windows": [
+    {"id": "2014_2015", "first_signal_date": "2014-01-31", "last_signal_date": "2015-12-31"},
+    {"id": "2016_2017", "first_signal_date": "2016-01-29", "last_signal_date": "2017-12-29"},
+    {"id": "2018_2019", "first_signal_date": "2018-01-31", "last_signal_date": "2019-12-31"},
+    {"id": "2020_2021", "first_signal_date": "2020-01-31", "last_signal_date": "2021-12-31"},
+    {"id": "2022_2023", "first_signal_date": "2022-01-31", "last_signal_date": "2023-12-29"},
+    {"id": "2024_2025", "first_signal_date": "2024-01-31", "last_signal_date": "2025-12-31"}
+  ],
+  "strategies": [
+    {
+      "id": "equal_weight",
+      "strategy": {"graph_method": "pcc", "selector": "all", "allocator": "equal_weight"}
+    },
+    {
+      "id": "inverse_volatility",
+      "strategy": {"graph_method": "pcc", "selector": "all", "allocator": "inverse_volatility"}
+    },
+    {
+      "id": "hierarchical_risk_parity",
+      "strategy": {"graph_method": "pcc", "selector": "all", "allocator": "hierarchical_risk_parity"}
+    },
+    {
+      "id": "pcc_hub_avoid_mean_cvar",
+      "strategy": {"graph_method": "pcc", "selector": "hub_avoid", "allocator": "mean_cvar"}
+    }
+  ]
+}

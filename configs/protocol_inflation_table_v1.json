@@ -1,0 +1,370 @@
+{
+  "kind": "protocol-inflation-table-spec",
+  "schema_version": 1,
+  "spec_id": "protocol-inflation-v6",
+  "primary_metric": "sharpe",
+  "notes": [
+    "Each row isolates one evaluation shortcut by holding the panel, strategy,",
+    "allocator, cost model, and execution rule fixed and varying only the",
+    "reporting choice. The 'reported' column is what a paper using the shortcut",
+    "would print; the 'honest' column is the same underlying runs read under the",
+    "stricter rule. Inflation is reported - honest.",
+    "No row selects a strategy. Every run named here was already executed and",
+    "documented before this spec existed; the spec only fixes how they are read.",
+    "v2 adds rows measured on the Track-B confirmation panel, which was sealed when the v1 rows were computed. Those rows are an out-of-sample replication of the inflation measurement itself, not new candidate evidence.",
+    "v3 adds the Track-B secondary-window rows. That window is the sharpest case in the table: reporting one seed yields an apparently marginal positive result, and every honest reading of the same runs removes it.",
+    "v4 adds the period-mismatch row surfaced by the quarterly robustness cell: a model with a long warm-up starts later than its baselines, so reading both off one table compares different market periods while every individual run remains correct.",
+    "v5 adds the training-budget row. The neural comparator was frozen at five epochs while its config declared twenty; running the declared budget raises the development median above equal weight and lowers the held-out median below it, so the shortcut measured here is reading a development window at a budget that does not transfer.",
+    "v6 adds the compound cell: one run read under the development window, the best seed and zero costs at once, against the honest reading of the same model."
+  ],
+  "rows": [
+    {
+      "row_id": "development-window-as-held-out",
+      "shortcut": "Report the development window as if it were a held-out test",
+      "panel": "US 30-ETF",
+      "strategy": "Causal dynamic graph-temporal model, 5 epochs",
+      "reported": {
+        "rule": "mean",
+        "runs": [
+          "public-etf-dev-v2-bandnone-cost10-seed7",
+          "public-etf-dev-similarity-seed17-epochs5",
+          "public-etf-dev-similarity-seed29-epochs5",
+          "public-etf-dev-similarity-seed43-epochs5",
+          "public-etf-dev-similarity-seed59-epochs5"
+        ]
+      },
+      "honest": {
+        "rule": "mean",
+        "runs": [
+          "public-etf-outer-dynamic-graph-full-seed7-epochs5",
+          "public-etf-outer-dynamic-graph-full-seed17-epochs5",
+          "public-etf-outer-dynamic-graph-full-seed29-epochs5",
+          "public-etf-outer-dynamic-graph-full-seed43-epochs5",
+          "public-etf-outer-dynamic-graph-full-seed59-epochs5"
+        ]
+      },
+      "reference": {
+        "label": "Equal weight, same outer window",
+        "runs": [
+          "public-etf-outer-equal-weight-pcc"
+        ]
+      }
+    },
+    {
+      "row_id": "best-seed-us30",
+      "shortcut": "Report the best random seed instead of the seed distribution",
+      "panel": "US 30-ETF",
+      "strategy": "Causal dynamic graph-temporal model, outer window",
+      "reported": {
+        "rule": "max",
+        "runs": [
+          "public-etf-outer-dynamic-graph-full-seed7-epochs5",
+          "public-etf-outer-dynamic-graph-full-seed17-epochs5",
+          "public-etf-outer-dynamic-graph-full-seed29-epochs5",
+          "public-etf-outer-dynamic-graph-full-seed43-epochs5",
+          "public-etf-outer-dynamic-graph-full-seed59-epochs5"
+        ]
+      },
+      "honest": {
+        "rule": "median",
+        "runs": [
+          "public-etf-outer-dynamic-graph-full-seed7-epochs5",
+          "public-etf-outer-dynamic-graph-full-seed17-epochs5",
+          "public-etf-outer-dynamic-graph-full-seed29-epochs5",
+          "public-etf-outer-dynamic-graph-full-seed43-epochs5",
+          "public-etf-outer-dynamic-graph-full-seed59-epochs5"
+        ]
+      },
+      "reference": {
+        "label": "Worst prescribed seed",
+        "rule": "min",
+        "runs": [
+          "public-etf-outer-dynamic-graph-full-seed7-epochs5",
+          "public-etf-outer-dynamic-graph-full-seed17-epochs5",
+          "public-etf-outer-dynamic-graph-full-seed29-epochs5",
+          "public-etf-outer-dynamic-graph-full-seed43-epochs5",
+          "public-etf-outer-dynamic-graph-full-seed59-epochs5"
+        ]
+      }
+    },
+    {
+      "row_id": "best-seed-us50",
+      "shortcut": "Report the best random seed instead of the seed distribution",
+      "panel": "US 50-ETF",
+      "strategy": "Causal dynamic graph-temporal model, development window",
+      "reported": {
+        "rule": "max",
+        "runs": [
+          "public-etf-expanded-dev-dynamic-seed7-epochs5",
+          "public-etf-expanded-dev-dynamic-seed17-epochs5",
+          "public-etf-expanded-dev-dynamic-seed29-epochs5",
+          "public-etf-expanded-dev-dynamic-seed43-epochs5",
+          "public-etf-expanded-dev-dynamic-seed59-epochs5"
+        ]
+      },
+      "honest": {
+        "rule": "median",
+        "runs": [
+          "public-etf-expanded-dev-dynamic-seed7-epochs5",
+          "public-etf-expanded-dev-dynamic-seed17-epochs5",
+          "public-etf-expanded-dev-dynamic-seed29-epochs5",
+          "public-etf-expanded-dev-dynamic-seed43-epochs5",
+          "public-etf-expanded-dev-dynamic-seed59-epochs5"
+        ]
+      },
+      "reference": {
+        "label": "Worst prescribed seed",
+        "rule": "min",
+        "runs": [
+          "public-etf-expanded-dev-dynamic-seed7-epochs5",
+          "public-etf-expanded-dev-dynamic-seed17-epochs5",
+          "public-etf-expanded-dev-dynamic-seed29-epochs5",
+          "public-etf-expanded-dev-dynamic-seed43-epochs5",
+          "public-etf-expanded-dev-dynamic-seed59-epochs5"
+        ]
+      }
+    },
+    {
+      "row_id": "costless-execution-dynamic",
+      "shortcut": "Report gross or near-zero transaction costs",
+      "panel": "US 30-ETF",
+      "strategy": "Causal dynamic graph-temporal model (mean one-way turnover 56%/month)",
+      "reported": {
+        "rule": "mean",
+        "runs": [
+          "public-etf-outer-cost0-dynamic-seed7",
+          "public-etf-outer-cost0-dynamic-seed17",
+          "public-etf-outer-cost0-dynamic-seed29",
+          "public-etf-outer-cost0-dynamic-seed43",
+          "public-etf-outer-cost0-dynamic-seed59"
+        ]
+      },
+      "honest": {
+        "rule": "mean",
+        "runs": [
+          "public-etf-outer-cost50-dynamic-seed7",
+          "public-etf-outer-cost50-dynamic-seed17",
+          "public-etf-outer-cost50-dynamic-seed29",
+          "public-etf-outer-cost50-dynamic-seed43",
+          "public-etf-outer-cost50-dynamic-seed59"
+        ]
+      },
+      "reference": {
+        "label": "Equal weight at 50 bps (2.6%/month turnover)",
+        "runs": [
+          "public-etf-outer-cost50-equal"
+        ]
+      }
+    },
+    {
+      "row_id": "costless-execution-equal-weight-control",
+      "shortcut": "Report gross or near-zero transaction costs",
+      "panel": "US 30-ETF",
+      "strategy": "Equal weight (low-turnover control: the choice should barely move it)",
+      "reported": {
+        "rule": "mean",
+        "runs": [
+          "public-etf-outer-cost0-equal"
+        ]
+      },
+      "honest": {
+        "rule": "mean",
+        "runs": [
+          "public-etf-outer-cost50-equal"
+        ]
+      }
+    },
+    {
+      "row_id": "costless-execution-dynamic-trackb",
+      "shortcut": "Report gross or near-zero transaction costs",
+      "panel": "Confirmation panel (US 30-ETF, sealed)",
+      "strategy": "Dynamic graph-temporal, seed 7 (48.9%/month turnover)",
+      "reported": {
+        "rule": "mean",
+        "runs": [
+          "alt-etf-cost0-dynamic-seed7"
+        ]
+      },
+      "honest": {
+        "rule": "mean",
+        "runs": [
+          "alt-etf-cost50-dynamic-seed7"
+        ]
+      },
+      "reference": {
+        "label": "Equal weight at 50 bps (2.0%/month turnover)",
+        "runs": [
+          "alt-etf-cost50-equal-weight"
+        ]
+      }
+    },
+    {
+      "row_id": "costless-execution-equal-weight-trackb",
+      "shortcut": "Report gross or near-zero transaction costs",
+      "panel": "Confirmation panel (US 30-ETF, sealed)",
+      "strategy": "Equal weight (low-turnover control: 2.0%/month)",
+      "reported": {
+        "rule": "mean",
+        "runs": [
+          "alt-etf-cost0-equal-weight"
+        ]
+      },
+      "honest": {
+        "rule": "mean",
+        "runs": [
+          "alt-etf-cost50-equal-weight"
+        ]
+      }
+    },
+    {
+      "row_id": "best-seed-trackb-2020",
+      "shortcut": "Report the best random seed instead of the seed distribution",
+      "panel": "Confirmation panel, 2020+ secondary window (sealed)",
+      "strategy": "Dynamic graph-temporal; best baseline on this window is 0.737",
+      "reported": {
+        "rule": "max",
+        "runs": [
+          "alt-etf-confirm2020-dynamic-seed7",
+          "alt-etf-confirm2020-dynamic-seed17",
+          "alt-etf-confirm2020-dynamic-seed29",
+          "alt-etf-confirm2020-dynamic-seed43",
+          "alt-etf-confirm2020-dynamic-seed59"
+        ]
+      },
+      "honest": {
+        "rule": "median",
+        "runs": [
+          "alt-etf-confirm2020-dynamic-seed7",
+          "alt-etf-confirm2020-dynamic-seed17",
+          "alt-etf-confirm2020-dynamic-seed29",
+          "alt-etf-confirm2020-dynamic-seed43",
+          "alt-etf-confirm2020-dynamic-seed59"
+        ]
+      },
+      "reference": {
+        "label": "Worst prescribed seed",
+        "rule": "min",
+        "runs": [
+          "alt-etf-confirm2020-dynamic-seed7",
+          "alt-etf-confirm2020-dynamic-seed17",
+          "alt-etf-confirm2020-dynamic-seed29",
+          "alt-etf-confirm2020-dynamic-seed43",
+          "alt-etf-confirm2020-dynamic-seed59"
+        ]
+      }
+    },
+    {
+      "row_id": "development-window-as-held-out-20-epochs",
+      "shortcut": "Report the development window as if it were a held-out test",
+      "panel": "US 30-ETF, declared 20-epoch training budget",
+      "strategy": "Dynamic graph-temporal, 5 seeds (equal weight: 0.792 development, 0.718 outer)",
+      "reported": {
+        "rule": "median",
+        "runs": [
+          "public-etf-dev-similarity-seed7-epochs20",
+          "public-etf-dev-similarity-seed17-epochs20",
+          "public-etf-dev-similarity-seed29-epochs20",
+          "public-etf-dev-similarity-seed43-epochs20",
+          "public-etf-dev-similarity-seed59-epochs20"
+        ]
+      },
+      "honest": {
+        "rule": "median",
+        "runs": [
+          "public-etf-outer-dynamic-seed7-epochs20",
+          "public-etf-outer-dynamic-seed17-epochs20",
+          "public-etf-outer-dynamic-seed29-epochs20",
+          "public-etf-outer-dynamic-seed43-epochs20",
+          "public-etf-outer-dynamic-seed59-epochs20"
+        ]
+      }
+    },
+    {
+      "row_id": "compound-three-shortcuts",
+      "shortcut": "All three of the above at once",
+      "panel": "US 30-ETF, declared 20-epoch budget",
+      "strategy": "Development window, best seed, zero costs, against held-out median at 10 bps",
+      "reported": {
+        "rule": "max",
+        "runs": [
+          "public-etf-dev-similarity-seed7-epochs20-cost0"
+        ]
+      },
+      "honest": {
+        "rule": "median",
+        "runs": [
+          "public-etf-outer-dynamic-seed7-epochs20",
+          "public-etf-outer-dynamic-seed17-epochs20",
+          "public-etf-outer-dynamic-seed29-epochs20",
+          "public-etf-outer-dynamic-seed43-epochs20",
+          "public-etf-outer-dynamic-seed59-epochs20"
+        ]
+      }
+    }
+  ],
+  "inference_rows": [
+    {
+      "row_id": "search-multiplicity",
+      "shortcut": "Report the best grid cell without correcting for the search",
+      "panel": "US 30-ETF",
+      "strategy": "Uncertainty-aware HMM conditional risk, 9-cell grid vs matched HRP-756 control",
+      "reported_label": "Paired bootstrap, best cell only",
+      "reported_p_value": 0.359,
+      "reported_p_value_source": "docs/HMM_UNCERTAINTY_REGIME_RISK_RESULTS.md",
+      "honest_label": "White Reality Check over all nine searched cells",
+      "reality_check": "results/public_etf_hmm_ledger_reality_check.json"
+    },
+    {
+      "row_id": "search-multiplicity-trackb",
+      "shortcut": "Report the best candidate without correcting for the family",
+      "panel": "Confirmation panel (US 30-ETF, sealed)",
+      "strategy": "Seven-candidate confirmation family vs strongest baseline",
+      "reported_label": "Paired bootstrap, best candidate only (seed 59)",
+      "reported_p_value": 0.131,
+      "reported_p_value_source": "results/confirmation/confirmation_inference_summary.json",
+      "honest_label": "White Reality Check over all seven confirmation candidates",
+      "reality_check": "results/confirmation/alt_etf_confirmation_reality_check_vs_best_baseline.json"
+    },
+    {
+      "row_id": "search-multiplicity-trackb-2020",
+      "shortcut": "Report the best seed's p-value without correcting for the family",
+      "panel": "Confirmation panel, 2020+ secondary window (sealed)",
+      "strategy": "Seed 7 alone vs the seven-candidate family, against the strongest baseline",
+      "reported_label": "Paired bootstrap, seed 7 only",
+      "reported_p_value": 0.065,
+      "reported_p_value_source": "results/confirmation_2020/confirmation_inference_summary.json",
+      "honest_label": "White Reality Check over all seven candidates",
+      "reality_check": "results/confirmation_2020/reality_check_vs_best_baseline.json"
+    }
+  ],
+  "benchmark_choice_rows": [
+    {
+      "row_id": "benchmark-choice-trackb",
+      "shortcut": "Fix one favourite baseline instead of reporting a ladder",
+      "panel": "Confirmation panel (US 30-ETF, sealed)",
+      "strategy": "Dynamic graph-temporal, best seed vs the six pre-declared baselines",
+      "candidate_run": "alt-etf-confirm-dynamic-seed59",
+      "convenient_benchmark_run": "alt-etf-confirm-equal-weight",
+      "convenient_benchmark_rationale": "Equal weight was the strongest simple comparator on the Track-A development panel, so it is the baseline a study following the development evidence would have carried forward.",
+      "baseline_pool": [
+        "alt-etf-confirm-equal-weight",
+        "alt-etf-confirm-inverse-vol",
+        "alt-etf-confirm-hrp-252",
+        "alt-etf-confirm-hrp-756",
+        "alt-etf-confirm-pcc-hub-avoid-cvar",
+        "alt-etf-confirm-partial-hub-avoid-cvar"
+      ]
+    }
+  ],
+  "period_mismatch_rows": [
+    {
+      "row_id": "period-mismatch-quarterly-trackb",
+      "shortcut": "Compare against a benchmark covering a different period",
+      "panel": "Confirmation panel, quarterly rebalance (sealed)",
+      "strategy": "Dynamic graph-temporal seed 7 (24-quarter warm-up starts 2020) vs equal weight",
+      "candidate_run": "alt-etf-quarterly-dynamic-seed7",
+      "mismatched_benchmark_run": "alt-etf-quarterly-equal-weight",
+      "matched_benchmark_run": "alt-etf-quarterly2020-equal-weight"
+    }
+  ]
+}

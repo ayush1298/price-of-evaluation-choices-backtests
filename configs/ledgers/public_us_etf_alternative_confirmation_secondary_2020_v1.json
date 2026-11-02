@@ -1,0 +1,134 @@
+{
+  "kind": "validation-candidate-ledger",
+  "schema_version": 1,
+  "ledger_id": "public-us-etf-alternative-confirmation-secondary-2020-v1",
+  "study_scope": "public_fixed_etf_confirmation",
+  "data_contract_id": "public-us-etf-alternative-2010-v1",
+  "selection_permitted": false,
+  "selection_metric": "sharpe",
+  "frozen_on": "2026-08-06",
+  "governing_amendment": "docs/ICAIF_CHARTER_AMENDMENT_V3_CONFIRMATION.md",
+  "ledger_notes": [
+    "Secondary-window ledger declared by ICAIF_CHARTER_AMENDMENT_V3_CONFIRMATION.md section 5.",
+    "Same candidate set and same frozen configurations as the primary window; only the",
+    "first signal boundary differs (2020-01-31), for comparability with the Track-A",
+    "chronological results.",
+    "selection_permitted is false. This window is a reported robustness view, not a",
+    "second chance to select a candidate.",
+    "Window bounds are concrete. Every run is executed with an explicit --last-signal-date 2026-07-24, so no reported result depends on the ledger validator's open-ended-window path."
+  ],
+  "validation_window": {
+    "first_signal_date": "2020-01-31",
+    "last_signal_date": "2026-07-24"
+  },
+  "benchmark_run_id": "alt-etf-confirm2020-equal-weight",
+  "baselines": [
+    {
+      "baseline_id": "equal-weight",
+      "run_id": "alt-etf-confirm2020-equal-weight",
+      "allocator": "equal_weight",
+      "graph": "pcc",
+      "selector": "all"
+    },
+    {
+      "baseline_id": "inverse-volatility-252",
+      "run_id": "alt-etf-confirm2020-inverse-vol",
+      "allocator": "inverse_volatility",
+      "graph": "pcc",
+      "selector": "all",
+      "lookback_sessions": 252
+    },
+    {
+      "baseline_id": "hrp-252",
+      "run_id": "alt-etf-confirm2020-hrp-252",
+      "allocator": "hierarchical_risk_parity",
+      "graph": "pcc",
+      "selector": "all",
+      "lookback_sessions": 252
+    },
+    {
+      "baseline_id": "hrp-756",
+      "run_id": "alt-etf-confirm2020-hrp-756",
+      "allocator": "hierarchical_risk_parity",
+      "graph": "pcc",
+      "selector": "all",
+      "lookback_sessions": 756
+    },
+    {
+      "baseline_id": "pcc-hub-avoid-cvar",
+      "run_id": "alt-etf-confirm2020-pcc-hub-avoid-cvar",
+      "allocator": "mean_cvar",
+      "graph": "pcc",
+      "selector": "hub_avoid"
+    },
+    {
+      "baseline_id": "partial-hub-avoid-cvar",
+      "run_id": "alt-etf-confirm2020-partial-hub-avoid-cvar",
+      "allocator": "mean_cvar",
+      "graph": "partial_correlation",
+      "selector": "hub_avoid"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "soft-regime-conditional-hrp-756",
+      "run_id": "alt-etf-confirm2020-soft-regime-conditional-hrp",
+      "frozen_from": "Track-A soft-regime conditional covariance/HRP candidate",
+      "expected_manifest_values": {
+        "extra.conditional_risk.lookback_sessions": 756,
+        "extra.backtest.transaction_cost_bps": 10.0,
+        "extra.backtest.max_weight": 0.1
+      }
+    },
+    {
+      "candidate_id": "hmm-2-lookback-252-band-0",
+      "run_id": "alt-etf-confirm2020-hmm-risk-h2-l252-b0",
+      "frozen_from": "Track-A HMM development maximum; not re-searched on this panel",
+      "expected_manifest_values": {
+        "extra.hmm.n_components": 2,
+        "extra.conditional_risk.lookback_sessions": 252,
+        "extra.backtest.min_rebalance_turnover": 0.0
+      }
+    },
+    {
+      "candidate_id": "dynamic-graph-temporal-seed7",
+      "run_id": "alt-etf-confirm2020-dynamic-seed7",
+      "frozen_from": "Track-A causal dynamic graph-temporal model, 5 epochs",
+      "expected_manifest_values": {
+        "extra.backtest.transaction_cost_bps": 10.0
+      }
+    },
+    {
+      "candidate_id": "dynamic-graph-temporal-seed17",
+      "run_id": "alt-etf-confirm2020-dynamic-seed17",
+      "frozen_from": "Track-A causal dynamic graph-temporal model, 5 epochs",
+      "expected_manifest_values": {
+        "extra.backtest.transaction_cost_bps": 10.0
+      }
+    },
+    {
+      "candidate_id": "dynamic-graph-temporal-seed29",
+      "run_id": "alt-etf-confirm2020-dynamic-seed29",
+      "frozen_from": "Track-A causal dynamic graph-temporal model, 5 epochs",
+      "expected_manifest_values": {
+        "extra.backtest.transaction_cost_bps": 10.0
+      }
+    },
+    {
+      "candidate_id": "dynamic-graph-temporal-seed43",
+      "run_id": "alt-etf-confirm2020-dynamic-seed43",
+      "frozen_from": "Track-A causal dynamic graph-temporal model, 5 epochs",
+      "expected_manifest_values": {
+        "extra.backtest.transaction_cost_bps": 10.0
+      }
+    },
+    {
+      "candidate_id": "dynamic-graph-temporal-seed59",
+      "run_id": "alt-etf-confirm2020-dynamic-seed59",
+      "frozen_from": "Track-A causal dynamic graph-temporal model, 5 epochs",
+      "expected_manifest_values": {
+        "extra.backtest.transaction_cost_bps": 10.0
+      }
+    }
+  ]
+}

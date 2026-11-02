@@ -1,0 +1,29 @@
+\begin{table}[t]
+\centering
+\caption{The quarterly cell, read two ways. The model's 24-quarter warm-up starts it
+in 2020 while the baselines start in 2014; every run is individually correct.
+Re-running the baselines over the model's own window collapses a $+0.54$ edge to
+$+0.045$ against equal weight and $+0.017$ against the strongest matched baseline.
+The model realises 17 fewer sessions than the baselines because its first execution
+follows its first signal by one session and its warm-up completes intra-quarter.}
+\label{tab:period}
+\footnotesize
+\begin{tabular}{lrr}
+\toprule
+Strategy (quarterly) & Sharpe & Obs. \\
+\midrule
+\multicolumn{3}{l}{\emph{As printed: benchmarks from 2014, model from 2020}} \\
+\quad Dynamic, seed 7 & 1.185 & 1569 \\
+\quad Equal weight & 0.646 & 3097 \\
+\midrule
+\multicolumn{3}{l}{\emph{Date-matched: all runs from 2020-03-31}} \\
+\quad Dynamic, seed 7 & \textbf{1.185} & 1569 \\
+\quad HRP (252) & 1.168 & 1586 \\
+\quad Inverse volatility & 1.162 & 1586 \\
+\quad Equal weight & 1.140 & 1586 \\
+\quad PCC hub-avoid, CVaR & 1.139 & 1586 \\
+\quad Partial-corr., CVaR & 1.135 & 1586 \\
+\quad HRP (756) & 1.127 & 1586 \\
+\bottomrule
+\end{tabular}
+\end{table}

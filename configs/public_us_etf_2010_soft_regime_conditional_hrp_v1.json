@@ -1,0 +1,32 @@
+{
+  "experiment_name": "public-us-etf-2010-soft-regime-conditional-hrp-v1",
+  "study_scope": "public_fixed_etf_exploratory",
+  "paper_eligible": false,
+  "market": "US_ETF",
+  "rebalance_frequency": "ME",
+  "execution_lag_sessions": 1,
+  "annualization_factor": 252,
+  "transaction_cost_bps": 10.0,
+  "minimum_history_sessions": 252,
+  "minimum_eligible_assets": 25,
+  "long_only": true,
+  "max_weight": 0.1,
+  "regime": {
+    "model": "expanding_soft_kmeans",
+    "n_components": 3,
+    "minimum_training_observations": 36,
+    "temperature": 1.0,
+    "ordering_feature": "realized_volatility",
+    "features": [
+      "realized_volatility",
+      "trailing_market_return",
+      "market_drawdown",
+      "cross_sectional_dispersion"
+    ]
+  },
+  "conditional_risk": {
+    "lookback_sessions": 756,
+    "minimum_effective_observations": 21,
+    "covariance_shrinkage": 0.25
+  }
+}

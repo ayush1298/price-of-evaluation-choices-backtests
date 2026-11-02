@@ -1,0 +1,96 @@
+{
+  "kind": "validation-candidate-ledger",
+  "schema_version": 1,
+  "ledger_id": "public-us-etf-hmm-uncertainty-archival-v1",
+  "study_scope": "public_fixed_etf_development",
+  "data_contract_id": "public-us-etf-2010-v1",
+  "selection_permitted": false,
+  "selection_metric": "sharpe",
+  "validation_window": {
+    "first_signal_date": "2014-01-31",
+    "last_signal_date": "2019-12-31"
+  },
+  "candidates": [
+    {
+      "candidate_id": "hmm-2-lookback-63-band-0",
+      "run_id": "public-etf-dev-hmm-risk-h2-l63-b0-v1",
+      "expected_manifest_values": {
+        "extra.hmm.n_components": 2,
+        "extra.conditional_risk.lookback_sessions": 63,
+        "extra.backtest.min_rebalance_turnover": 0.0
+      }
+    },
+    {
+      "candidate_id": "hmm-2-lookback-126-band-0",
+      "run_id": "public-etf-dev-hmm-risk-h2-l126-b0-v1",
+      "expected_manifest_values": {
+        "extra.hmm.n_components": 2,
+        "extra.conditional_risk.lookback_sessions": 126,
+        "extra.backtest.min_rebalance_turnover": 0.0
+      }
+    },
+    {
+      "candidate_id": "hmm-2-lookback-252-band-0",
+      "run_id": "public-etf-dev-hmm-risk-h2-l252-b0-v1",
+      "expected_manifest_values": {
+        "extra.hmm.n_components": 2,
+        "extra.conditional_risk.lookback_sessions": 252,
+        "extra.backtest.min_rebalance_turnover": 0.0
+      }
+    },
+    {
+      "candidate_id": "hmm-3-lookback-63-band-0",
+      "run_id": "public-etf-dev-hmm-risk-h3-l63-b0-v1",
+      "expected_manifest_values": {
+        "extra.hmm.n_components": 3,
+        "extra.conditional_risk.lookback_sessions": 63,
+        "extra.backtest.min_rebalance_turnover": 0.0
+      }
+    },
+    {
+      "candidate_id": "hmm-3-lookback-126-band-0",
+      "run_id": "public-etf-dev-hmm-risk-h3-l126-b0-v1",
+      "expected_manifest_values": {
+        "extra.hmm.n_components": 3,
+        "extra.conditional_risk.lookback_sessions": 126,
+        "extra.backtest.min_rebalance_turnover": 0.0
+      }
+    },
+    {
+      "candidate_id": "hmm-3-lookback-252-band-0",
+      "run_id": "public-etf-dev-hmm-risk-h3-l252-b0-v1",
+      "expected_manifest_values": {
+        "extra.hmm.n_components": 3,
+        "extra.conditional_risk.lookback_sessions": 252,
+        "extra.backtest.min_rebalance_turnover": 0.0
+      }
+    },
+    {
+      "candidate_id": "hmm-4-lookback-63-band-0",
+      "run_id": "public-etf-dev-hmm-risk-h4-l63-b0-v1",
+      "expected_manifest_values": {
+        "extra.hmm.n_components": 4,
+        "extra.conditional_risk.lookback_sessions": 63,
+        "extra.backtest.min_rebalance_turnover": 0.0
+      }
+    },
+    {
+      "candidate_id": "hmm-4-lookback-126-band-0",
+      "run_id": "public-etf-dev-hmm-risk-h4-l126-b0-v1",
+      "expected_manifest_values": {
+        "extra.hmm.n_components": 4,
+        "extra.conditional_risk.lookback_sessions": 126,
+        "extra.backtest.min_rebalance_turnover": 0.0
+      }
+    },
+    {
+      "candidate_id": "hmm-4-lookback-252-band-0",
+      "run_id": "public-etf-dev-hmm-risk-h4-l252-b0-v1",
+      "expected_manifest_values": {
+        "extra.hmm.n_components": 4,
+        "extra.conditional_risk.lookback_sessions": 252,
+        "extra.backtest.min_rebalance_turnover": 0.0
+      }
+    }
+  ]
+}

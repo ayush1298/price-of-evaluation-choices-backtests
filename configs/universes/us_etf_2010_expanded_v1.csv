@@ -1,0 +1,51 @@
+symbol,asset_group,selection_rule
+SPY,US broad equity,Pre-declared liquid US ETF trading before 2010
+QQQ,US growth equity,Pre-declared liquid US ETF trading before 2010
+DIA,US large-cap equity,Pre-declared liquid US ETF trading before 2010
+IWM,US small-cap equity,Pre-declared liquid US ETF trading before 2010
+XLB,US materials sector,Pre-declared liquid US ETF trading before 2010
+XLE,US energy sector,Pre-declared liquid US ETF trading before 2010
+XLF,US financials sector,Pre-declared liquid US ETF trading before 2010
+XLI,US industrials sector,Pre-declared liquid US ETF trading before 2010
+XLK,US technology sector,Pre-declared liquid US ETF trading before 2010
+XLP,US consumer staples sector,Pre-declared liquid US ETF trading before 2010
+XLU,US utilities sector,Pre-declared liquid US ETF trading before 2010
+XLV,US health-care sector,Pre-declared liquid US ETF trading before 2010
+XLY,US consumer discretionary sector,Pre-declared liquid US ETF trading before 2010
+EFA,Developed ex-US equity,Pre-declared liquid US ETF trading before 2010
+EEM,Emerging-markets equity,Pre-declared liquid US ETF trading before 2010
+EWJ,Japan equity,Pre-declared liquid US ETF trading before 2010
+EWG,Germany equity,Pre-declared liquid US ETF trading before 2010
+EWU,United Kingdom equity,Pre-declared liquid US ETF trading before 2010
+EWQ,France equity,Pre-declared liquid US ETF trading before 2010
+EWA,Australia equity,Pre-declared liquid US ETF trading before 2010
+EWC,Canada equity,Pre-declared liquid US ETF trading before 2010
+EWH,Hong Kong equity,Pre-declared liquid US ETF trading before 2010
+EWW,Mexico equity,Pre-declared liquid US ETF trading before 2010
+TLT,Long Treasury bonds,Pre-declared liquid US ETF trading before 2010
+IEF,Intermediate Treasury bonds,Pre-declared liquid US ETF trading before 2010
+LQD,Investment-grade corporate bonds,Pre-declared liquid US ETF trading before 2010
+HYG,High-yield corporate bonds,Pre-declared liquid US ETF trading before 2010
+VNQ,US real estate,Pre-declared liquid US ETF trading before 2010
+GLD,Gold,Pre-declared liquid US ETF trading before 2010
+DBC,Diversified commodities,Pre-declared liquid US ETF trading before 2010
+VWO,Emerging-markets equity broad,Pre-declared liquid US ETF trading before 2010
+EWT,Taiwan equity,Pre-declared liquid US ETF trading before 2010
+EWY,Korea equity,Pre-declared liquid US ETF trading before 2010
+EWS,Singapore equity,Pre-declared liquid US ETF trading before 2010
+FXI,China large-cap equity,Pre-declared liquid US ETF trading before 2010
+XBI,US biotechnology sector,Pre-declared liquid US ETF trading before 2010
+SMH,US semiconductor sector,Pre-declared liquid US ETF trading before 2010
+KRE,US regional banks,Pre-declared liquid US ETF trading before 2010
+XRT,US retail sector,Pre-declared liquid US ETF trading before 2010
+XOP,US oil and gas exploration,Pre-declared liquid US ETF trading before 2010
+IYR,US real estate,Pre-declared liquid US ETF trading before 2010
+GDX,Gold-mining equities,Pre-declared liquid US ETF trading before 2010
+SLV,Silver,Pre-declared liquid US ETF trading before 2010
+USO,Oil futures exposure,Pre-declared liquid US ETF trading before 2010
+UNG,Natural-gas futures exposure,Pre-declared liquid US ETF trading before 2010
+AGG,US aggregate bonds,Pre-declared liquid US ETF trading before 2010
+SHY,Short Treasury bonds,Pre-declared liquid US ETF trading before 2010
+TIP,Inflation-linked Treasury bonds,Pre-declared liquid US ETF trading before 2010
+MUB,Municipal bonds,Pre-declared liquid US ETF trading before 2010
+PFF,Preferred securities,Pre-declared liquid US ETF trading before 2010

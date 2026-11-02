@@ -1,0 +1,60 @@
+# Core Deep Learning Framework
+torch>=1.8.0
+torchvision>=0.9.0
+torchaudio>=0.8.0
+
+# Data Processing and Analysis
+pandas>=1.3.0
+numpy>=1.20.0
+scipy>=1.7.0
+scikit-learn>=1.0.0
+hmmlearn>=0.3.0
+
+# Financial Data
+pandas-datareader>=0.10.0
+
+# Graph Processing and Network Analysis
+networkx>=3.0
+
+# Time Series Analysis
+fastdtw>=0.3.4
+visibility-graph>=0.5.1
+ts2vg>=0.2.0
+
+
+# Additional Utilities
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+# Optional: For better performance
+cudatoolkit>=11.0  # For CUDA support (conda install)
+cudnn>=8.0        # For CUDA support (conda install)
+
+# Development and Testing
+pytest>=6.0.0
+jupyter>=1.0.0
+ipykernel>=6.0.0
+
+# Data Visualization (for notebooks)
+plotly>=5.0.0
+bokeh>=2.3.0
+
+# Progress bars and utilities
+tqdm>=4.60.0
+
+# File handling
+openpyxl>=3.0.0
+xlrd>=2.0.0
+
+# Statistical analysis
+statsmodels>=0.12.0
+
+# Memory optimization
+psutil>=5.8.0
+
+# Logging
+loguru>=0.5.0
+
+pandas-datareader>=0.10.0
+yfinance>=0.2.0
+yfinance>=0.2

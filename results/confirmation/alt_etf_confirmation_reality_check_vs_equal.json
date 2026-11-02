@@ -1,0 +1,111 @@
+{
+  "kind": "white-reality-check-canonical-runs",
+  "candidate_ledger": {
+    "path": "/Users/ayushmunot/Regime-Aware-Portfolio-Optimization-using-Deep-Co-investment-Networks/configs/ledgers/public_us_etf_alternative_confirmation_v1.json",
+    "sha256": "6a704c0c4697ca7aadccc1b21e890d0e6c8d2bc1b55468962133b249eb04cd20"
+  },
+  "candidate_ledger_audit": {
+    "ledger_id": "public-us-etf-alternative-confirmation-v1",
+    "study_scope": "public_fixed_etf_confirmation",
+    "data_contract_id": "public-us-etf-alternative-2010-v1",
+    "selection_permitted": false,
+    "selection_metric": "sharpe",
+    "candidate_count": 7,
+    "complete_candidate_count": 7,
+    "incomplete_candidate_count": 0,
+    "selection_status": "selection_not_permitted_by_ledger",
+    "selected_candidate_id": null,
+    "selected_metric_value": null,
+    "candidates": [
+      {
+        "candidate_id": "soft-regime-conditional-hrp-756",
+        "run_id": "alt-etf-confirm-soft-regime-conditional-hrp",
+        "status": "complete",
+        "metric_value": 0.6862682080109329
+      },
+      {
+        "candidate_id": "hmm-2-lookback-252-band-0",
+        "run_id": "alt-etf-confirm-hmm-risk-h2-l252-b0",
+        "status": "complete",
+        "metric_value": 0.6969707491483469
+      },
+      {
+        "candidate_id": "dynamic-graph-temporal-seed7",
+        "run_id": "alt-etf-confirm-dynamic-seed7",
+        "status": "complete",
+        "metric_value": 0.7005335730379229
+      },
+      {
+        "candidate_id": "dynamic-graph-temporal-seed17",
+        "run_id": "alt-etf-confirm-dynamic-seed17",
+        "status": "complete",
+        "metric_value": 0.6810608979307745
+      },
+      {
+        "candidate_id": "dynamic-graph-temporal-seed29",
+        "run_id": "alt-etf-confirm-dynamic-seed29",
+        "status": "complete",
+        "metric_value": 0.5975620351612039
+      },
+      {
+        "candidate_id": "dynamic-graph-temporal-seed43",
+        "run_id": "alt-etf-confirm-dynamic-seed43",
+        "status": "complete",
+        "metric_value": 0.6148780503965996
+      },
+      {
+        "candidate_id": "dynamic-graph-temporal-seed59",
+        "run_id": "alt-etf-confirm-dynamic-seed59",
+        "status": "complete",
+        "metric_value": 0.7230978882550354
+      }
+    ]
+  },
+  "benchmark": {
+    "run_id": "alt-etf-confirm-equal-weight",
+    "run_manifest_sha256": "768117a0028b26c6dcf4845b11ab1cfc583708d0088205076c8aa6a275062760",
+    "daily_nav_sha256": "fdd70aa038b1eaa653e6ccfcdb7ba0fe85d60d1f650c8779caaf430e0afa04a6"
+  },
+  "candidates": {
+    "soft-regime-conditional-hrp-756": {
+      "run_manifest_sha256": "e055ad2799fcde01c8c8f706a55f8fbf5353342093a3e858bc2b9bca5f13bb20",
+      "daily_nav_sha256": "9bc96aea4fcc2e2ffac3e9f5e7556bbaeea636d9f2bde44fc671a291f1feb792"
+    },
+    "hmm-2-lookback-252-band-0": {
+      "run_manifest_sha256": "d9d2797377dfe5cec1df044471590a6fedcf3e2115ed99f2b725a211eb88f45c",
+      "daily_nav_sha256": "502ce69d46acd04e26f9d08f9f4e3e4d293ff882e2e8b5397dc104744fd1b43b"
+    },
+    "dynamic-graph-temporal-seed7": {
+      "run_manifest_sha256": "969e24cf3bf2e7bd630ffcc1d437d2ab3ecbffd47937b2348992254ef5c39549",
+      "daily_nav_sha256": "c7824ab8cd93bf10205a151f74f66128602ecb323fee337e4385f05154d9e587"
+    },
+    "dynamic-graph-temporal-seed17": {
+      "run_manifest_sha256": "a2f2ed7de8636e363fc4c46ff6141618c762870348524ca40654bdb8805baaf9",
+      "daily_nav_sha256": "09fa9638aa88e7d0cc45bdf7361265c6c5382ba84147d2ddada3cf3010016060"
+    },
+    "dynamic-graph-temporal-seed29": {
+      "run_manifest_sha256": "82975d1c5a993bb2926f54b1c11246855c80ba1a15cc2ab6e06d0e407cb1db3f",
+      "daily_nav_sha256": "0837154c9c5b3f34800ec9b0a868bbc71fa34a978753c266e4a0f90066f01817"
+    },
+    "dynamic-graph-temporal-seed43": {
+      "run_manifest_sha256": "a3d9cb9fee2797ea117ae24112bd8f4f916b0ba327b2452ea1565709b4a7d32b",
+      "daily_nav_sha256": "c5b903a26cdbc029de3612c422b5b44cbffeef8586be2f411691f8296e678437"
+    },
+    "dynamic-graph-temporal-seed59": {
+      "run_manifest_sha256": "04799b43a5843af30165adcd7331a608def3f711aec57215504db01b51237f48",
+      "daily_nav_sha256": "6af17f61706931b49db599df0916105d8463fcbe50d8cec67f2d341c14fb6f64"
+    }
+  },
+  "result": {
+    "observations": 3120,
+    "candidates": 7,
+    "block_length": 21,
+    "replications": 5000,
+    "annualization_factor": 252,
+    "best_candidate": "dynamic-graph-temporal-seed59",
+    "best_mean_daily_excess_return": 3.0058781141755218e-05,
+    "best_annualized_excess_return": 0.007574812847722315,
+    "reality_check_p_value": 0.7180563887222555
+  },
+  "warning": "This tests the full ledger family against one matched benchmark. It does not establish data validity, an untouched outer result, or paper eligibility."
+}

@@ -1,0 +1,865 @@
+{
+  "kind": "protocol-inflation-table",
+  "spec": {
+    "path": "configs/protocol_inflation_table_v1.json",
+    "sha256": "3f2f55f441502a561080a7d0f85242f676c923011f163f96b2c8eec848b465ec"
+  },
+  "spec_id": "protocol-inflation-v6",
+  "primary_metric": "sharpe",
+  "rows": [
+    {
+      "row_id": "development-window-as-held-out",
+      "shortcut": "Report the development window as if it were a held-out test",
+      "panel": "US 30-ETF",
+      "strategy": "Causal dynamic graph-temporal model, 5 epochs",
+      "reported": {
+        "rule": "mean",
+        "value": 0.7751524899852444,
+        "n_runs": 5,
+        "n_observations": 1489,
+        "runs": {
+          "public-etf-dev-v2-bandnone-cost10-seed7": {
+            "run_manifest_sha256": "25e2ed3638292afa926f6b76eea9e954df949b9ebb4afce67ab2f51992652008",
+            "performance_metrics_sha256": "c5f321b6e9ffa69e854199b0de20dab73dc5f2488a25e481f2b7927796b34077",
+            "sharpe": 0.8213815980164761
+          },
+          "public-etf-dev-similarity-seed17-epochs5": {
+            "run_manifest_sha256": "06340460fe26b33b55675c6453db1c8d10aae043bbcbc54ad8a4e4ce6371839e",
+            "performance_metrics_sha256": "70eff885d030f5e66a21a828defe39f46f7c360bd5b4f0bb243b9bc98cc49347",
+            "sharpe": 0.7627760917508953
+          },
+          "public-etf-dev-similarity-seed29-epochs5": {
+            "run_manifest_sha256": "68f13d6af19ba5ed335a7a6091ce3065129dd045201eaaeb8d6d292dd8cb755b",
+            "performance_metrics_sha256": "1634523899f5d999b1b47ca71944a2ac75aa09ef2b1fdedd89f088f59a577183",
+            "sharpe": 0.6779699256339634
+          },
+          "public-etf-dev-similarity-seed43-epochs5": {
+            "run_manifest_sha256": "e8aa21862704cc4438a59c1a3f45bb9d1a97aafdd1a681005a2df045164e14bc",
+            "performance_metrics_sha256": "9583cee0ddaa2c100ac791fa2bb121af010a449c08ac6c6787a7f9e2ec31167c",
+            "sharpe": 0.7506117120089253
+          },
+          "public-etf-dev-similarity-seed59-epochs5": {
+            "run_manifest_sha256": "a53b1defcfb60e6ab18cb4c10445496b93d03e264929894b1c001e64ceab83fc",
+            "performance_metrics_sha256": "fcdcd7b7947a1a61e88bbc7a4cf148e757ac74d99f6084af3f4a935d07cfabba",
+            "sharpe": 0.8630231225159622
+          }
+        }
+      },
+      "honest": {
+        "rule": "mean",
+        "value": 0.6853887342552744,
+        "n_runs": 5,
+        "n_observations": 1627,
+        "runs": {
+          "public-etf-outer-dynamic-graph-full-seed7-epochs5": {
+            "run_manifest_sha256": "a55094bc41ac765e3e035d64e23feab9b09482131aa8b0c8b7044b45d268d84d",
+            "performance_metrics_sha256": "6c8896b30c4eeb446f0325d85fb68f56a3b2afbf98babec23cea7de80640b0e7",
+            "sharpe": 0.7300190440329903
+          },
+          "public-etf-outer-dynamic-graph-full-seed17-epochs5": {
+            "run_manifest_sha256": "62d07f3a98f0e71708764d27d784f66c62cfe8adf1dbf85577bca9f0b60766e5",
+            "performance_metrics_sha256": "61c074e454589d7b3d7715535f2c3dba74489e3a6e6cba9f1e33aa9d1f3a85e2",
+            "sharpe": 0.590186156040494
+          },
+          "public-etf-outer-dynamic-graph-full-seed29-epochs5": {
+            "run_manifest_sha256": "cd5d4e70d49ca5383fd7c3535de41818c950f927c04f1af35f531de47db7fdb7",
+            "performance_metrics_sha256": "a7aadbe40f3e8c7a696a78a1c79c6b88a55abcec0f97db0b1267cf28744fd0fe",
+            "sharpe": 0.7287107550000365
+          },
+          "public-etf-outer-dynamic-graph-full-seed43-epochs5": {
+            "run_manifest_sha256": "1cf0751deaf8e40d5aff52445f4ebb5e3928e6255e4e3ac4ca8101f2dffc41e6",
+            "performance_metrics_sha256": "c5b17eb4cb139e0edf0e78979ff8ca81a0cdb6f396e4bd3dcb4a3286c97e1017",
+            "sharpe": 0.6440175958422847
+          },
+          "public-etf-outer-dynamic-graph-full-seed59-epochs5": {
+            "run_manifest_sha256": "3781cd8e578d86df872b977b3a6af277889d9a3028f5a9de4935fa914fb8384b",
+            "performance_metrics_sha256": "90a4eafbc142e89f2db24372b6988632c14811bf3679654a5acd0daa5d1f3687",
+            "sharpe": 0.7340101203605665
+          }
+        }
+      },
+      "inflation": 0.08976375572997009,
+      "reference": {
+        "rule": "mean",
+        "value": 0.7184351303026607,
+        "n_runs": 1,
+        "n_observations": 1627,
+        "runs": {
+          "public-etf-outer-equal-weight-pcc": {
+            "run_manifest_sha256": "a3fe46a53fd074eb6fb5b68d4235c52fa8d485c29bf8663d2b47f7ec0b37c62a",
+            "performance_metrics_sha256": "6719f2392656233d94d8a2ebc297a0b5a7690ec397fe79d2ea6fbca21c89c1f0",
+            "sharpe": 0.7184351303026607
+          }
+        },
+        "label": "Equal weight, same outer window"
+      }
+    },
+    {
+      "row_id": "best-seed-us30",
+      "shortcut": "Report the best random seed instead of the seed distribution",
+      "panel": "US 30-ETF",
+      "strategy": "Causal dynamic graph-temporal model, outer window",
+      "reported": {
+        "rule": "max",
+        "value": 0.7340101203605665,
+        "n_runs": 5,
+        "n_observations": 1627,
+        "runs": {
+          "public-etf-outer-dynamic-graph-full-seed7-epochs5": {
+            "run_manifest_sha256": "a55094bc41ac765e3e035d64e23feab9b09482131aa8b0c8b7044b45d268d84d",
+            "performance_metrics_sha256": "6c8896b30c4eeb446f0325d85fb68f56a3b2afbf98babec23cea7de80640b0e7",
+            "sharpe": 0.7300190440329903
+          },
+          "public-etf-outer-dynamic-graph-full-seed17-epochs5": {
+            "run_manifest_sha256": "62d07f3a98f0e71708764d27d784f66c62cfe8adf1dbf85577bca9f0b60766e5",
+            "performance_metrics_sha256": "61c074e454589d7b3d7715535f2c3dba74489e3a6e6cba9f1e33aa9d1f3a85e2",
+            "sharpe": 0.590186156040494
+          },
+          "public-etf-outer-dynamic-graph-full-seed29-epochs5": {
+            "run_manifest_sha256": "cd5d4e70d49ca5383fd7c3535de41818c950f927c04f1af35f531de47db7fdb7",
+            "performance_metrics_sha256": "a7aadbe40f3e8c7a696a78a1c79c6b88a55abcec0f97db0b1267cf28744fd0fe",
+            "sharpe": 0.7287107550000365
+          },
+          "public-etf-outer-dynamic-graph-full-seed43-epochs5": {
+            "run_manifest_sha256": "1cf0751deaf8e40d5aff52445f4ebb5e3928e6255e4e3ac4ca8101f2dffc41e6",
+            "performance_metrics_sha256": "c5b17eb4cb139e0edf0e78979ff8ca81a0cdb6f396e4bd3dcb4a3286c97e1017",
+            "sharpe": 0.6440175958422847
+          },
+          "public-etf-outer-dynamic-graph-full-seed59-epochs5": {
+            "run_manifest_sha256": "3781cd8e578d86df872b977b3a6af277889d9a3028f5a9de4935fa914fb8384b",
+            "performance_metrics_sha256": "90a4eafbc142e89f2db24372b6988632c14811bf3679654a5acd0daa5d1f3687",
+            "sharpe": 0.7340101203605665
+          }
+        }
+      },
+      "honest": {
+        "rule": "median",
+        "value": 0.7287107550000365,
+        "n_runs": 5,
+        "n_observations": 1627,
+        "runs": {
+          "public-etf-outer-dynamic-graph-full-seed7-epochs5": {
+            "run_manifest_sha256": "a55094bc41ac765e3e035d64e23feab9b09482131aa8b0c8b7044b45d268d84d",
+            "performance_metrics_sha256": "6c8896b30c4eeb446f0325d85fb68f56a3b2afbf98babec23cea7de80640b0e7",
+            "sharpe": 0.7300190440329903
+          },
+          "public-etf-outer-dynamic-graph-full-seed17-epochs5": {
+            "run_manifest_sha256": "62d07f3a98f0e71708764d27d784f66c62cfe8adf1dbf85577bca9f0b60766e5",
+            "performance_metrics_sha256": "61c074e454589d7b3d7715535f2c3dba74489e3a6e6cba9f1e33aa9d1f3a85e2",
+            "sharpe": 0.590186156040494
+          },
+          "public-etf-outer-dynamic-graph-full-seed29-epochs5": {
+            "run_manifest_sha256": "cd5d4e70d49ca5383fd7c3535de41818c950f927c04f1af35f531de47db7fdb7",
+            "performance_metrics_sha256": "a7aadbe40f3e8c7a696a78a1c79c6b88a55abcec0f97db0b1267cf28744fd0fe",
+            "sharpe": 0.7287107550000365
+          },
+          "public-etf-outer-dynamic-graph-full-seed43-epochs5": {
+            "run_manifest_sha256": "1cf0751deaf8e40d5aff52445f4ebb5e3928e6255e4e3ac4ca8101f2dffc41e6",
+            "performance_metrics_sha256": "c5b17eb4cb139e0edf0e78979ff8ca81a0cdb6f396e4bd3dcb4a3286c97e1017",
+            "sharpe": 0.6440175958422847
+          },
+          "public-etf-outer-dynamic-graph-full-seed59-epochs5": {
+            "run_manifest_sha256": "3781cd8e578d86df872b977b3a6af277889d9a3028f5a9de4935fa914fb8384b",
+            "performance_metrics_sha256": "90a4eafbc142e89f2db24372b6988632c14811bf3679654a5acd0daa5d1f3687",
+            "sharpe": 0.7340101203605665
+          }
+        }
+      },
+      "inflation": 0.005299365360529995,
+      "reference": {
+        "rule": "min",
+        "value": 0.590186156040494,
+        "n_runs": 5,
+        "n_observations": 1627,
+        "runs": {
+          "public-etf-outer-dynamic-graph-full-seed7-epochs5": {
+            "run_manifest_sha256": "a55094bc41ac765e3e035d64e23feab9b09482131aa8b0c8b7044b45d268d84d",
+            "performance_metrics_sha256": "6c8896b30c4eeb446f0325d85fb68f56a3b2afbf98babec23cea7de80640b0e7",
+            "sharpe": 0.7300190440329903
+          },
+          "public-etf-outer-dynamic-graph-full-seed17-epochs5": {
+            "run_manifest_sha256": "62d07f3a98f0e71708764d27d784f66c62cfe8adf1dbf85577bca9f0b60766e5",
+            "performance_metrics_sha256": "61c074e454589d7b3d7715535f2c3dba74489e3a6e6cba9f1e33aa9d1f3a85e2",
+            "sharpe": 0.590186156040494
+          },
+          "public-etf-outer-dynamic-graph-full-seed29-epochs5": {
+            "run_manifest_sha256": "cd5d4e70d49ca5383fd7c3535de41818c950f927c04f1af35f531de47db7fdb7",
+            "performance_metrics_sha256": "a7aadbe40f3e8c7a696a78a1c79c6b88a55abcec0f97db0b1267cf28744fd0fe",
+            "sharpe": 0.7287107550000365
+          },
+          "public-etf-outer-dynamic-graph-full-seed43-epochs5": {
+            "run_manifest_sha256": "1cf0751deaf8e40d5aff52445f4ebb5e3928e6255e4e3ac4ca8101f2dffc41e6",
+            "performance_metrics_sha256": "c5b17eb4cb139e0edf0e78979ff8ca81a0cdb6f396e4bd3dcb4a3286c97e1017",
+            "sharpe": 0.6440175958422847
+          },
+          "public-etf-outer-dynamic-graph-full-seed59-epochs5": {
+            "run_manifest_sha256": "3781cd8e578d86df872b977b3a6af277889d9a3028f5a9de4935fa914fb8384b",
+            "performance_metrics_sha256": "90a4eafbc142e89f2db24372b6988632c14811bf3679654a5acd0daa5d1f3687",
+            "sharpe": 0.7340101203605665
+          }
+        },
+        "label": "Worst prescribed seed"
+      }
+    },
+    {
+      "row_id": "best-seed-us50",
+      "shortcut": "Report the best random seed instead of the seed distribution",
+      "panel": "US 50-ETF",
+      "strategy": "Causal dynamic graph-temporal model, development window",
+      "reported": {
+        "rule": "max",
+        "value": 1.2608532301961637,
+        "n_runs": 5,
+        "n_observations": 1489,
+        "runs": {
+          "public-etf-expanded-dev-dynamic-seed7-epochs5": {
+            "run_manifest_sha256": "b63398f10501441124925ee4b2ef5e4d09425a26a074d9993ecedec98574a282",
+            "performance_metrics_sha256": "2ea5e61eea03c91fc004880242917ecb615b7b96ddc66aa7e28500a71af76eef",
+            "sharpe": 1.1919120377691634
+          },
+          "public-etf-expanded-dev-dynamic-seed17-epochs5": {
+            "run_manifest_sha256": "6786f56822cfce2de0f63391be5ddb94667ad108172f7c9da6f0aada6b61be85",
+            "performance_metrics_sha256": "804893b5132c784857d7f20ed0365443abb6ce2bc7ab57a9572057b94d32bd66",
+            "sharpe": 0.7591230373924613
+          },
+          "public-etf-expanded-dev-dynamic-seed29-epochs5": {
+            "run_manifest_sha256": "e96bba5ba39eca5ea21a807cc2ed39971fefb0677e43faf4aada0f6e9aecf869",
+            "performance_metrics_sha256": "03fec95ec907a84b4ed04d4379f981fe46c1200d01bb6f49228e88c4fcf5fe30",
+            "sharpe": 0.18160948946722258
+          },
+          "public-etf-expanded-dev-dynamic-seed43-epochs5": {
+            "run_manifest_sha256": "f54f451fe669a53b4edaad97606a022b175b16ac20377ede9681d87a4ee930b6",
+            "performance_metrics_sha256": "31684574beade3e5bd4dd19340c87f8c7a6fd4f17bcc060eaff51063292331ae",
+            "sharpe": 0.4607089925411626
+          },
+          "public-etf-expanded-dev-dynamic-seed59-epochs5": {
+            "run_manifest_sha256": "6cc4ec0bb9d1204453c87d9025c91d46e0f6f0e362f4cc620a13173ee23c8c55",
+            "performance_metrics_sha256": "1555a51bebfd0e126ba2e54d37fd9f4ebb304181880bc866d194af1e5b0e3911",
+            "sharpe": 1.2608532301961637
+          }
+        }
+      },
+      "honest": {
+        "rule": "median",
+        "value": 0.7591230373924613,
+        "n_runs": 5,
+        "n_observations": 1489,
+        "runs": {
+          "public-etf-expanded-dev-dynamic-seed7-epochs5": {
+            "run_manifest_sha256": "b63398f10501441124925ee4b2ef5e4d09425a26a074d9993ecedec98574a282",
+            "performance_metrics_sha256": "2ea5e61eea03c91fc004880242917ecb615b7b96ddc66aa7e28500a71af76eef",
+            "sharpe": 1.1919120377691634
+          },
+          "public-etf-expanded-dev-dynamic-seed17-epochs5": {
+            "run_manifest_sha256": "6786f56822cfce2de0f63391be5ddb94667ad108172f7c9da6f0aada6b61be85",
+            "performance_metrics_sha256": "804893b5132c784857d7f20ed0365443abb6ce2bc7ab57a9572057b94d32bd66",
+            "sharpe": 0.7591230373924613
+          },
+          "public-etf-expanded-dev-dynamic-seed29-epochs5": {
+            "run_manifest_sha256": "e96bba5ba39eca5ea21a807cc2ed39971fefb0677e43faf4aada0f6e9aecf869",
+            "performance_metrics_sha256": "03fec95ec907a84b4ed04d4379f981fe46c1200d01bb6f49228e88c4fcf5fe30",
+            "sharpe": 0.18160948946722258
+          },
+          "public-etf-expanded-dev-dynamic-seed43-epochs5": {
+            "run_manifest_sha256": "f54f451fe669a53b4edaad97606a022b175b16ac20377ede9681d87a4ee930b6",
+            "performance_metrics_sha256": "31684574beade3e5bd4dd19340c87f8c7a6fd4f17bcc060eaff51063292331ae",
+            "sharpe": 0.4607089925411626
+          },
+          "public-etf-expanded-dev-dynamic-seed59-epochs5": {
+            "run_manifest_sha256": "6cc4ec0bb9d1204453c87d9025c91d46e0f6f0e362f4cc620a13173ee23c8c55",
+            "performance_metrics_sha256": "1555a51bebfd0e126ba2e54d37fd9f4ebb304181880bc866d194af1e5b0e3911",
+            "sharpe": 1.2608532301961637
+          }
+        }
+      },
+      "inflation": 0.5017301928037023,
+      "reference": {
+        "rule": "min",
+        "value": 0.18160948946722258,
+        "n_runs": 5,
+        "n_observations": 1489,
+        "runs": {
+          "public-etf-expanded-dev-dynamic-seed7-epochs5": {
+            "run_manifest_sha256": "b63398f10501441124925ee4b2ef5e4d09425a26a074d9993ecedec98574a282",
+            "performance_metrics_sha256": "2ea5e61eea03c91fc004880242917ecb615b7b96ddc66aa7e28500a71af76eef",
+            "sharpe": 1.1919120377691634
+          },
+          "public-etf-expanded-dev-dynamic-seed17-epochs5": {
+            "run_manifest_sha256": "6786f56822cfce2de0f63391be5ddb94667ad108172f7c9da6f0aada6b61be85",
+            "performance_metrics_sha256": "804893b5132c784857d7f20ed0365443abb6ce2bc7ab57a9572057b94d32bd66",
+            "sharpe": 0.7591230373924613
+          },
+          "public-etf-expanded-dev-dynamic-seed29-epochs5": {
+            "run_manifest_sha256": "e96bba5ba39eca5ea21a807cc2ed39971fefb0677e43faf4aada0f6e9aecf869",
+            "performance_metrics_sha256": "03fec95ec907a84b4ed04d4379f981fe46c1200d01bb6f49228e88c4fcf5fe30",
+            "sharpe": 0.18160948946722258
+          },
+          "public-etf-expanded-dev-dynamic-seed43-epochs5": {
+            "run_manifest_sha256": "f54f451fe669a53b4edaad97606a022b175b16ac20377ede9681d87a4ee930b6",
+            "performance_metrics_sha256": "31684574beade3e5bd4dd19340c87f8c7a6fd4f17bcc060eaff51063292331ae",
+            "sharpe": 0.4607089925411626
+          },
+          "public-etf-expanded-dev-dynamic-seed59-epochs5": {
+            "run_manifest_sha256": "6cc4ec0bb9d1204453c87d9025c91d46e0f6f0e362f4cc620a13173ee23c8c55",
+            "performance_metrics_sha256": "1555a51bebfd0e126ba2e54d37fd9f4ebb304181880bc866d194af1e5b0e3911",
+            "sharpe": 1.2608532301961637
+          }
+        },
+        "label": "Worst prescribed seed"
+      }
+    },
+    {
+      "row_id": "costless-execution-dynamic",
+      "shortcut": "Report gross or near-zero transaction costs",
+      "panel": "US 30-ETF",
+      "strategy": "Causal dynamic graph-temporal model (mean one-way turnover 56%/month)",
+      "reported": {
+        "rule": "mean",
+        "value": 0.7314935587200335,
+        "n_runs": 5,
+        "n_observations": 1627,
+        "runs": {
+          "public-etf-outer-cost0-dynamic-seed7": {
+            "run_manifest_sha256": "73eb0fd2fad35a55c51fa0bdedf0ab51a918a33f53db2901f36d648708dc332e",
+            "performance_metrics_sha256": "d91dc4c8729af2735643bec7b630f507e968b39df6bac2794a6fa76a1ee2f256",
+            "sharpe": 0.7777937010453557
+          },
+          "public-etf-outer-cost0-dynamic-seed17": {
+            "run_manifest_sha256": "f63b0f2677074512e9aada1d0d0531d3842b193f20c9dc2ca59a7a1124cb916e",
+            "performance_metrics_sha256": "ea1feb0d469e0de19f2ee777b94d34f46628835a84d152e29a03e974dc79028c",
+            "sharpe": 0.640059946206523
+          },
+          "public-etf-outer-cost0-dynamic-seed29": {
+            "run_manifest_sha256": "f479c3a089005bdb45d7cced033241efaab3e133cb45c412a7c3a76539fa766b",
+            "performance_metrics_sha256": "66c068590acfdd653dfd23601bac8dada7b18429f2296d250681a9f4772fa99e",
+            "sharpe": 0.7779661715106148
+          },
+          "public-etf-outer-cost0-dynamic-seed43": {
+            "run_manifest_sha256": "121916bd8d1fdd31a41a4330b89f956b5d7a9ce40ac0af3f6fd46d3131d8d68d",
+            "performance_metrics_sha256": "458b6dfdc2e54a8c149d883cef93ec3560a0c97e30a51f9e4859c804d6eea4c9",
+            "sharpe": 0.684690045144135
+          },
+          "public-etf-outer-cost0-dynamic-seed59": {
+            "run_manifest_sha256": "a607d4112d7ad8d6fb006490e24eda93577b33a10b8129c21ed0604692adf882",
+            "performance_metrics_sha256": "47b2afea44e6ff81fd4a5e77d392cb68014c612e0052b8805548de6e3d1e99eb",
+            "sharpe": 0.7769579296935394
+          }
+        }
+      },
+      "honest": {
+        "rule": "mean",
+        "value": 0.499778097931226,
+        "n_runs": 5,
+        "n_observations": 1627,
+        "runs": {
+          "public-etf-outer-cost50-dynamic-seed7": {
+            "run_manifest_sha256": "32919b01478d4e14e0e5698c108b0d01849854188d0fa1179c10716a7dbad2c9",
+            "performance_metrics_sha256": "251eeaaa380ef14f67d52299d0edc72d896e98e8d1ae7ad3eef3ee478ecd9378",
+            "sharpe": 0.5374422443066738
+          },
+          "public-etf-outer-cost50-dynamic-seed17": {
+            "run_manifest_sha256": "6cb2496b448c3bc89d3d6ed8dfd08533f5ae0f57aa70dd2f7de988eec2d0e93a",
+            "performance_metrics_sha256": "8a1e8a5c19a0889832f13ca314b2cc00848d7027c9220b432f641210f7545655",
+            "sharpe": 0.3898876850480308
+          },
+          "public-etf-outer-cost50-dynamic-seed29": {
+            "run_manifest_sha256": "fb1171afd8b7f232c0756f3bc0960f3e262661b5d8fd13b9902b923f2e508f97",
+            "performance_metrics_sha256": "585ec1132b93522ce28363e2e9f8bfa504ec4e9ac336334966283cfea63dec54",
+            "sharpe": 0.5300803420973043
+          },
+          "public-etf-outer-cost50-dynamic-seed43": {
+            "run_manifest_sha256": "7120c02cb91b943d6f0f541ab270c1e3cc3d529f85517703d9c0d8f4118b3b8c",
+            "performance_metrics_sha256": "7e4bf736ad216102fe90c504568b8b6b6070f2be4db4a65aac9ad6df568155b7",
+            "sharpe": 0.48045995529784863
+          },
+          "public-etf-outer-cost50-dynamic-seed59": {
+            "run_manifest_sha256": "0606b157e43b4babb4f96b9b6f077fda1dec053118db6aa4233027ee1cd1d91a",
+            "performance_metrics_sha256": "6275ee0411d14217fe39beacf49fd7ad76366e373fbcb8e4b25823d128c08544",
+            "sharpe": 0.5610202629062725
+          }
+        }
+      },
+      "inflation": 0.2317154607888075,
+      "reference": {
+        "rule": "mean",
+        "value": 0.7103834211843515,
+        "n_runs": 1,
+        "n_observations": 1627,
+        "runs": {
+          "public-etf-outer-cost50-equal": {
+            "run_manifest_sha256": "4e000784c0aab50fff0771b3f7a0c8a329e20e7aad078c5f557cf445ead00107",
+            "performance_metrics_sha256": "93a8df2244321d791cf6bab48b006f020415b40ae7b4e4ffc953344aef5e8d43",
+            "sharpe": 0.7103834211843515
+          }
+        },
+        "label": "Equal weight at 50 bps (2.6%/month turnover)"
+      }
+    },
+    {
+      "row_id": "costless-execution-equal-weight-control",
+      "shortcut": "Report gross or near-zero transaction costs",
+      "panel": "US 30-ETF",
+      "strategy": "Equal weight (low-turnover control: the shortcut should barely move it)",
+      "reported": {
+        "rule": "mean",
+        "value": 0.7204371107028773,
+        "n_runs": 1,
+        "n_observations": 1627,
+        "runs": {
+          "public-etf-outer-cost0-equal": {
+            "run_manifest_sha256": "c582800a2fd7d279ebbc7e0effdd645cec537d752d39831599c69a4210899b58",
+            "performance_metrics_sha256": "e7c65736b222e6cffb7a80e3515bb07fec137a4bf5cda22b6c00063c4d35973c",
+            "sharpe": 0.7204371107028773
+          }
+        }
+      },
+      "honest": {
+        "rule": "mean",
+        "value": 0.7103834211843515,
+        "n_runs": 1,
+        "n_observations": 1627,
+        "runs": {
+          "public-etf-outer-cost50-equal": {
+            "run_manifest_sha256": "4e000784c0aab50fff0771b3f7a0c8a329e20e7aad078c5f557cf445ead00107",
+            "performance_metrics_sha256": "93a8df2244321d791cf6bab48b006f020415b40ae7b4e4ffc953344aef5e8d43",
+            "sharpe": 0.7103834211843515
+          }
+        }
+      },
+      "inflation": 0.01005368951852581
+    },
+    {
+      "row_id": "costless-execution-dynamic-trackb",
+      "shortcut": "Report gross or near-zero transaction costs",
+      "panel": "Confirmation panel (US 30-ETF, sealed)",
+      "strategy": "Dynamic graph-temporal, seed 7 (48.9%/month turnover)",
+      "reported": {
+        "rule": "mean",
+        "value": 0.7347424153953942,
+        "n_runs": 1,
+        "n_observations": 3137,
+        "runs": {
+          "alt-etf-cost0-dynamic-seed7": {
+            "run_manifest_sha256": "ceec1d0961e08d7cbf985b32203dfc262ed682a5042d255ad5fe4a189ee1680d",
+            "performance_metrics_sha256": "0e302a982e5c41d9392159ba1c690025f6c91e5139608d82c3c61736185b03d6",
+            "sharpe": 0.7347424153953942
+          }
+        }
+      },
+      "honest": {
+        "rule": "mean",
+        "value": 0.5675783976634251,
+        "n_runs": 1,
+        "n_observations": 3137,
+        "runs": {
+          "alt-etf-cost50-dynamic-seed7": {
+            "run_manifest_sha256": "3b2e3ff13d8737b645ecef137f11b1d48e38246806ee36bb454365851899c0aa",
+            "performance_metrics_sha256": "d3d3b574b7dd303041e2aaff36987a22220caa272564de37ce69a3d1d3bf530d",
+            "sharpe": 0.5675783976634251
+          }
+        }
+      },
+      "inflation": 0.1671640177319691,
+      "reference": {
+        "rule": "mean",
+        "value": 0.6730031644101306,
+        "n_runs": 1,
+        "n_observations": 3137,
+        "runs": {
+          "alt-etf-cost50-equal-weight": {
+            "run_manifest_sha256": "6a55b99d494c025047607439e1aeb4a953512df5008f23c1a62a592235e466af",
+            "performance_metrics_sha256": "6f18c5f51554bf031246f81afd1d9ae554746398751f676cd77a4b0e4e85fb6e",
+            "sharpe": 0.6730031644101306
+          }
+        },
+        "label": "Equal weight at 50 bps (2.0%/month turnover)"
+      }
+    },
+    {
+      "row_id": "costless-execution-equal-weight-trackb",
+      "shortcut": "Report gross or near-zero transaction costs",
+      "panel": "Confirmation panel (US 30-ETF, sealed)",
+      "strategy": "Equal weight (low-turnover control: 2.0%/month)",
+      "reported": {
+        "rule": "mean",
+        "value": 0.6796627328990719,
+        "n_runs": 1,
+        "n_observations": 3137,
+        "runs": {
+          "alt-etf-cost0-equal-weight": {
+            "run_manifest_sha256": "5332e3d7941df95a6902fa1932c85fa7dde190eaf87566ed52cf67ff42ef837e",
+            "performance_metrics_sha256": "c2eb17744fe1348cf8a55648e076eeb9e05740298429743c80d40e43fb5906ec",
+            "sharpe": 0.6796627328990719
+          }
+        }
+      },
+      "honest": {
+        "rule": "mean",
+        "value": 0.6730031644101306,
+        "n_runs": 1,
+        "n_observations": 3137,
+        "runs": {
+          "alt-etf-cost50-equal-weight": {
+            "run_manifest_sha256": "6a55b99d494c025047607439e1aeb4a953512df5008f23c1a62a592235e466af",
+            "performance_metrics_sha256": "6f18c5f51554bf031246f81afd1d9ae554746398751f676cd77a4b0e4e85fb6e",
+            "sharpe": 0.6730031644101306
+          }
+        }
+      },
+      "inflation": 0.0066595684889412254
+    },
+    {
+      "row_id": "best-seed-trackb-2020",
+      "shortcut": "Report the best random seed instead of the seed distribution",
+      "panel": "Confirmation panel, 2020+ secondary window (sealed)",
+      "strategy": "Dynamic graph-temporal; best baseline on this window is 0.737",
+      "reported": {
+        "rule": "max",
+        "value": 0.7991390298669211,
+        "n_runs": 5,
+        "n_observations": 1610,
+        "runs": {
+          "alt-etf-confirm2020-dynamic-seed7": {
+            "run_manifest_sha256": "0c427df1129cb4b012134889749b60ae52ebb756aec3bcf08808f1dd104ff485",
+            "performance_metrics_sha256": "c0d7d0f117be2bfc48b9cfe87cf65d484eef61685ce19cad8417a317dbb852b5",
+            "sharpe": 0.7991390298669211
+          },
+          "alt-etf-confirm2020-dynamic-seed17": {
+            "run_manifest_sha256": "fec0ce87a35d04e37bc7b738c81ff747b87f575c39c5a9245c01d1a18285b238",
+            "performance_metrics_sha256": "becce3688fb0652c7b99544f99b88d40d97c95b27a9f124eceaf4141be390acf",
+            "sharpe": 0.7137970461321548
+          },
+          "alt-etf-confirm2020-dynamic-seed29": {
+            "run_manifest_sha256": "0ce4ddbefc92f139268d84d6adf2ed528f35c2f8edcdfe39f085cf71a67c6b65",
+            "performance_metrics_sha256": "bbc36b2a9f7e1e2e9713e22bfe6549bb280b6460c7136ef0ce1bc501530fa16c",
+            "sharpe": 0.5973767117378934
+          },
+          "alt-etf-confirm2020-dynamic-seed43": {
+            "run_manifest_sha256": "bbf17bdd19e381a770a43aaf9d050e48b5cfb3d9d11ef8ae3950257a3dcc114c",
+            "performance_metrics_sha256": "f0630b505b1df8954dbde8c3c7d43b3cf1348914604b1858f6dc2db89ab46771",
+            "sharpe": 0.6396241228417053
+          },
+          "alt-etf-confirm2020-dynamic-seed59": {
+            "run_manifest_sha256": "a6bd1af9ae29a02f89771a73f2fb53be95fbd58ca640b9f336bb053b2995cdb5",
+            "performance_metrics_sha256": "5d8077559a7eef1b903bce84aba84adc18b96f4e048d9813afbbd7960d26f8bf",
+            "sharpe": 0.7426854514259569
+          }
+        }
+      },
+      "honest": {
+        "rule": "median",
+        "value": 0.7137970461321548,
+        "n_runs": 5,
+        "n_observations": 1610,
+        "runs": {
+          "alt-etf-confirm2020-dynamic-seed7": {
+            "run_manifest_sha256": "0c427df1129cb4b012134889749b60ae52ebb756aec3bcf08808f1dd104ff485",
+            "performance_metrics_sha256": "c0d7d0f117be2bfc48b9cfe87cf65d484eef61685ce19cad8417a317dbb852b5",
+            "sharpe": 0.7991390298669211
+          },
+          "alt-etf-confirm2020-dynamic-seed17": {
+            "run_manifest_sha256": "fec0ce87a35d04e37bc7b738c81ff747b87f575c39c5a9245c01d1a18285b238",
+            "performance_metrics_sha256": "becce3688fb0652c7b99544f99b88d40d97c95b27a9f124eceaf4141be390acf",
+            "sharpe": 0.7137970461321548
+          },
+          "alt-etf-confirm2020-dynamic-seed29": {
+            "run_manifest_sha256": "0ce4ddbefc92f139268d84d6adf2ed528f35c2f8edcdfe39f085cf71a67c6b65",
+            "performance_metrics_sha256": "bbc36b2a9f7e1e2e9713e22bfe6549bb280b6460c7136ef0ce1bc501530fa16c",
+            "sharpe": 0.5973767117378934
+          },
+          "alt-etf-confirm2020-dynamic-seed43": {
+            "run_manifest_sha256": "bbf17bdd19e381a770a43aaf9d050e48b5cfb3d9d11ef8ae3950257a3dcc114c",
+            "performance_metrics_sha256": "f0630b505b1df8954dbde8c3c7d43b3cf1348914604b1858f6dc2db89ab46771",
+            "sharpe": 0.6396241228417053
+          },
+          "alt-etf-confirm2020-dynamic-seed59": {
+            "run_manifest_sha256": "a6bd1af9ae29a02f89771a73f2fb53be95fbd58ca640b9f336bb053b2995cdb5",
+            "performance_metrics_sha256": "5d8077559a7eef1b903bce84aba84adc18b96f4e048d9813afbbd7960d26f8bf",
+            "sharpe": 0.7426854514259569
+          }
+        }
+      },
+      "inflation": 0.08534198373476631,
+      "reference": {
+        "rule": "min",
+        "value": 0.5973767117378934,
+        "n_runs": 5,
+        "n_observations": 1610,
+        "runs": {
+          "alt-etf-confirm2020-dynamic-seed7": {
+            "run_manifest_sha256": "0c427df1129cb4b012134889749b60ae52ebb756aec3bcf08808f1dd104ff485",
+            "performance_metrics_sha256": "c0d7d0f117be2bfc48b9cfe87cf65d484eef61685ce19cad8417a317dbb852b5",
+            "sharpe": 0.7991390298669211
+          },
+          "alt-etf-confirm2020-dynamic-seed17": {
+            "run_manifest_sha256": "fec0ce87a35d04e37bc7b738c81ff747b87f575c39c5a9245c01d1a18285b238",
+            "performance_metrics_sha256": "becce3688fb0652c7b99544f99b88d40d97c95b27a9f124eceaf4141be390acf",
+            "sharpe": 0.7137970461321548
+          },
+          "alt-etf-confirm2020-dynamic-seed29": {
+            "run_manifest_sha256": "0ce4ddbefc92f139268d84d6adf2ed528f35c2f8edcdfe39f085cf71a67c6b65",
+            "performance_metrics_sha256": "bbc36b2a9f7e1e2e9713e22bfe6549bb280b6460c7136ef0ce1bc501530fa16c",
+            "sharpe": 0.5973767117378934
+          },
+          "alt-etf-confirm2020-dynamic-seed43": {
+            "run_manifest_sha256": "bbf17bdd19e381a770a43aaf9d050e48b5cfb3d9d11ef8ae3950257a3dcc114c",
+            "performance_metrics_sha256": "f0630b505b1df8954dbde8c3c7d43b3cf1348914604b1858f6dc2db89ab46771",
+            "sharpe": 0.6396241228417053
+          },
+          "alt-etf-confirm2020-dynamic-seed59": {
+            "run_manifest_sha256": "a6bd1af9ae29a02f89771a73f2fb53be95fbd58ca640b9f336bb053b2995cdb5",
+            "performance_metrics_sha256": "5d8077559a7eef1b903bce84aba84adc18b96f4e048d9813afbbd7960d26f8bf",
+            "sharpe": 0.7426854514259569
+          }
+        },
+        "label": "Worst prescribed seed"
+      }
+    },
+    {
+      "row_id": "development-window-as-held-out-20-epochs",
+      "shortcut": "Report the development window as if it were a held-out test",
+      "panel": "US 30-ETF, declared 20-epoch training budget",
+      "strategy": "Dynamic graph-temporal, 5 seeds (equal weight: 0.792 development, 0.718 outer)",
+      "reported": {
+        "rule": "median",
+        "value": 0.9296350272462262,
+        "n_runs": 5,
+        "n_observations": 1468,
+        "runs": {
+          "public-etf-dev-similarity-seed7-epochs20": {
+            "run_manifest_sha256": "0c021f29e92cd6a0491798d728b7398a3917c5fc76c820f9ba32b727b66858f0",
+            "performance_metrics_sha256": "ad51c669711db9060314c35d927b7c23ab4c0cf3bd9b90bd851f68001afa00f0",
+            "sharpe": 0.9840126506636349
+          },
+          "public-etf-dev-similarity-seed17-epochs20": {
+            "run_manifest_sha256": "b8f4c3c612cc90d0718dfe788892c0efa313d1111c4cbf25de3f2bb5d2c69e1d",
+            "performance_metrics_sha256": "5581944b147eaacbb48b3d299a9213138a0c123c3af8b9cd6c6ef815a32fe834",
+            "sharpe": 0.6631836005535374
+          },
+          "public-etf-dev-similarity-seed29-epochs20": {
+            "run_manifest_sha256": "c1510677dcbfd557fd0cee045e28a8f07a63bd4e68e804fccc26e3f2bd706fbd",
+            "performance_metrics_sha256": "bf3c0c8cdfdf84ab2ec168a6595b6c744fc230de0dc09266697894922817c500",
+            "sharpe": 0.9296350272462262
+          },
+          "public-etf-dev-similarity-seed43-epochs20": {
+            "run_manifest_sha256": "567b205e2ad0165d7a54902fd65110b4a1cc677c215b8bb3ef6da3ea7bf2bf84",
+            "performance_metrics_sha256": "5c5a133159b00c1c07244a3a625f3a9e8a86ff96349b13ac4e6b6832c5c1677c",
+            "sharpe": 0.9368478663515268
+          },
+          "public-etf-dev-similarity-seed59-epochs20": {
+            "run_manifest_sha256": "7dd6ddb4b33d424f7267cdaed8809e72f92eca7e4d6be8437ec6d206466db245",
+            "performance_metrics_sha256": "b45c7f91cf03f19dec4fe34c9f4e0623d2ab71778b2b85167c8d5951201ce965",
+            "sharpe": 0.9199396432254682
+          }
+        }
+      },
+      "honest": {
+        "rule": "median",
+        "value": 0.6035137324710913,
+        "n_runs": 5,
+        "n_observations": 1610,
+        "runs": {
+          "public-etf-outer-dynamic-seed7-epochs20": {
+            "run_manifest_sha256": "46a3b25356911f0ba304084c0dcba2ee7a44abfdccb06170e06127138d343506",
+            "performance_metrics_sha256": "c60463c55360e85d3104a44a54ef30c6306c3ac7bcd52a7b5d5208b7dc5bb175",
+            "sharpe": 0.5771196435443321
+          },
+          "public-etf-outer-dynamic-seed17-epochs20": {
+            "run_manifest_sha256": "2dc3bae2c48fd88912183b0c060d0b2db2367a10c4abb40d1b125aad62b03b18",
+            "performance_metrics_sha256": "b82b5d2f8ed1546e72a543a6b9a48d2ae384ef5d4687a19d906a5736517a46e1",
+            "sharpe": 0.6035137324710913
+          },
+          "public-etf-outer-dynamic-seed29-epochs20": {
+            "run_manifest_sha256": "f873a71865e210ea9ac4a513f8d4ab67bf931b0b690c58de2376ba685e0ea897",
+            "performance_metrics_sha256": "1683367f7e0631195c3f03461af61b70715c58ec13f688a1bfcb407da66f9992",
+            "sharpe": 0.7046038284836581
+          },
+          "public-etf-outer-dynamic-seed43-epochs20": {
+            "run_manifest_sha256": "bbdd893b954e8be8facf8cf4ca733102fc56f4e7cab327ee96b2268740ea9748",
+            "performance_metrics_sha256": "2a992b17fe42cb0b8862e7c319551c549201de2d8de18995dbbc39212f0f8116",
+            "sharpe": 0.6817027538431369
+          },
+          "public-etf-outer-dynamic-seed59-epochs20": {
+            "run_manifest_sha256": "1c48cc0167a0a14db6365d7f41c5534ba43fda053fbe1336bfdbd73418cefa1d",
+            "performance_metrics_sha256": "4fa96bee85c68077db9c1dc76c4b0a58e1dc86fe91978e6e31e95f93f267577b",
+            "sharpe": 0.4702339288962726
+          }
+        }
+      },
+      "inflation": 0.32612129477513485
+    },
+    {
+      "row_id": "compound-three-shortcuts",
+      "shortcut": "All three of the above at once",
+      "panel": "US 30-ETF, declared 20-epoch budget",
+      "strategy": "Development window, best seed, zero costs, against held-out median at 10 bps",
+      "reported": {
+        "rule": "max",
+        "value": 1.094680664325317,
+        "n_runs": 1,
+        "n_observations": 1489,
+        "runs": {
+          "public-etf-dev-similarity-seed7-epochs20-cost0": {
+            "run_manifest_sha256": "42986cfe42cebef1b8723016c9f3fe8245bbcea793aecadd13afba1a7fe3f06d",
+            "performance_metrics_sha256": "b293349648f4a46125ed96022c3ae09fb0e68018a3a02b28d8fbe3a2f8b01726",
+            "sharpe": 1.094680664325317
+          }
+        }
+      },
+      "honest": {
+        "rule": "median",
+        "value": 0.6035137324710913,
+        "n_runs": 5,
+        "n_observations": 1610,
+        "runs": {
+          "public-etf-outer-dynamic-seed7-epochs20": {
+            "run_manifest_sha256": "46a3b25356911f0ba304084c0dcba2ee7a44abfdccb06170e06127138d343506",
+            "performance_metrics_sha256": "c60463c55360e85d3104a44a54ef30c6306c3ac7bcd52a7b5d5208b7dc5bb175",
+            "sharpe": 0.5771196435443321
+          },
+          "public-etf-outer-dynamic-seed17-epochs20": {
+            "run_manifest_sha256": "2dc3bae2c48fd88912183b0c060d0b2db2367a10c4abb40d1b125aad62b03b18",
+            "performance_metrics_sha256": "b82b5d2f8ed1546e72a543a6b9a48d2ae384ef5d4687a19d906a5736517a46e1",
+            "sharpe": 0.6035137324710913
+          },
+          "public-etf-outer-dynamic-seed29-epochs20": {
+            "run_manifest_sha256": "f873a71865e210ea9ac4a513f8d4ab67bf931b0b690c58de2376ba685e0ea897",
+            "performance_metrics_sha256": "1683367f7e0631195c3f03461af61b70715c58ec13f688a1bfcb407da66f9992",
+            "sharpe": 0.7046038284836581
+          },
+          "public-etf-outer-dynamic-seed43-epochs20": {
+            "run_manifest_sha256": "bbdd893b954e8be8facf8cf4ca733102fc56f4e7cab327ee96b2268740ea9748",
+            "performance_metrics_sha256": "2a992b17fe42cb0b8862e7c319551c549201de2d8de18995dbbc39212f0f8116",
+            "sharpe": 0.6817027538431369
+          },
+          "public-etf-outer-dynamic-seed59-epochs20": {
+            "run_manifest_sha256": "1c48cc0167a0a14db6365d7f41c5534ba43fda053fbe1336bfdbd73418cefa1d",
+            "performance_metrics_sha256": "4fa96bee85c68077db9c1dc76c4b0a58e1dc86fe91978e6e31e95f93f267577b",
+            "sharpe": 0.4702339288962726
+          }
+        }
+      },
+      "inflation": 0.4911669318542258
+    }
+  ],
+  "benchmark_choice_rows": [
+    {
+      "row_id": "benchmark-choice-trackb",
+      "shortcut": "Fix one favourite baseline instead of reporting a ladder",
+      "panel": "Confirmation panel (US 30-ETF, sealed)",
+      "strategy": "Dynamic graph-temporal, best seed vs the six pre-declared baselines",
+      "candidate_run": "alt-etf-confirm-dynamic-seed59",
+      "candidate_value": 0.7230978882550354,
+      "convenient_benchmark": {
+        "run_id": "alt-etf-confirm-equal-weight",
+        "sharpe": 0.678334265761334
+      },
+      "strongest_baseline": {
+        "run_id": "alt-etf-confirm-partial-hub-avoid-cvar",
+        "sharpe": 0.7481996209761038
+      },
+      "baseline_pool": {
+        "alt-etf-confirm-equal-weight": 0.678334265761334,
+        "alt-etf-confirm-inverse-vol": 0.707857862342092,
+        "alt-etf-confirm-hrp-252": 0.7039125502195087,
+        "alt-etf-confirm-hrp-756": 0.6947983647817743,
+        "alt-etf-confirm-pcc-hub-avoid-cvar": 0.7227282925015184,
+        "alt-etf-confirm-partial-hub-avoid-cvar": 0.7481996209761038
+      },
+      "reported_edge": 0.04476362249370136,
+      "honest_edge": -0.025101732721068415,
+      "inflation": 0.06986535521476978,
+      "conclusion_sign_flips": true
+    }
+  ],
+  "period_mismatch_rows": [
+    {
+      "row_id": "period-mismatch-quarterly-trackb",
+      "shortcut": "Compare against a benchmark covering a different period",
+      "panel": "Confirmation panel, quarterly rebalance (sealed)",
+      "strategy": "Dynamic graph-temporal seed 7 (24-quarter warm-up starts 2020) vs equal weight",
+      "candidate": {
+        "run_id": "alt-etf-quarterly-dynamic-seed7",
+        "sharpe": 1.1847952300767233,
+        "n_observations": 1569
+      },
+      "mismatched_benchmark": {
+        "run_id": "alt-etf-quarterly-equal-weight",
+        "sharpe": 0.6464162705594221,
+        "n_observations": 3097
+      },
+      "matched_benchmark": {
+        "run_id": "alt-etf-quarterly2020-equal-weight",
+        "sharpe": 1.1397723642476745,
+        "n_observations": 1586
+      },
+      "reported_edge": 0.5383789595173012,
+      "honest_edge": 0.0450228658290488,
+      "inflation": 0.4933560936882524,
+      "conclusion_sign_flips": false
+    }
+  ],
+  "inference_rows": [
+    {
+      "row_id": "search-multiplicity",
+      "shortcut": "Report the best grid cell without correcting for the search",
+      "panel": "US 30-ETF",
+      "strategy": "Uncertainty-aware HMM conditional risk, 9-cell grid vs matched HRP-756 control",
+      "reported": {
+        "label": "Paired bootstrap, best cell only",
+        "p_value": 0.359,
+        "source": "docs/HMM_UNCERTAINTY_REGIME_RISK_RESULTS.md"
+      },
+      "honest": {
+        "label": "White Reality Check over all nine searched cells",
+        "p_value": 0.6804639072185563,
+        "candidates": 9,
+        "n_observations": 1489,
+        "best_candidate": "hmm-2-lookback-252-band-0",
+        "reality_check_sha256": "7bb489909793dc29404950c86d7b3aae77fff7219717b14ca05f6798e815b058"
+      },
+      "p_value_understatement": 0.32146390721855633
+    },
+    {
+      "row_id": "search-multiplicity-trackb",
+      "shortcut": "Report the best candidate without correcting for the family",
+      "panel": "Confirmation panel (US 30-ETF, sealed)",
+      "strategy": "Seven-candidate confirmation family vs strongest baseline",
+      "reported": {
+        "label": "Paired bootstrap, best candidate only (seed 59)",
+        "p_value": 0.131,
+        "source": "results/confirmation/confirmation_inference_summary.json"
+      },
+      "honest": {
+        "label": "White Reality Check over all seven confirmation candidates",
+        "p_value": 0.3437312537492502,
+        "candidates": 7,
+        "n_observations": 3120,
+        "best_candidate": "dynamic-graph-temporal-seed59",
+        "reality_check_sha256": "8e6422c4cd185a301be6b4f1c4f4ef88ddcfe6384db254747a12fac5c6e211fc"
+      },
+      "p_value_understatement": 0.21273125374925017
+    },
+    {
+      "row_id": "search-multiplicity-trackb-2020",
+      "shortcut": "Report the best seed's p-value without correcting for the family",
+      "panel": "Confirmation panel, 2020+ secondary window (sealed)",
+      "strategy": "Seed 7 alone vs the seven-candidate family, against the strongest baseline",
+      "reported": {
+        "label": "Paired bootstrap, seed 7 only",
+        "p_value": 0.065,
+        "source": "results/confirmation_2020/confirmation_inference_summary.json"
+      },
+      "honest": {
+        "label": "White Reality Check over all seven candidates",
+        "p_value": 0.1851629674065187,
+        "candidates": 7,
+        "n_observations": 1610,
+        "best_candidate": "dynamic-graph-temporal-seed7",
+        "reality_check_sha256": "0dee89898ac49ffdedd504cc961b0e327a6cb64dd557b3ada709f683b4d534b6"
+      },
+      "p_value_understatement": 0.12016296740651869
+    }
+  ],
+  "warning": "This table measures reporting conventions, not strategy quality. No row here is evidence that any method works; every candidate involved failed its held-out gate."
+}

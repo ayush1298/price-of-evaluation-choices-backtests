@@ -1,0 +1,17 @@
+{
+  "experiment_name": "public-india-etf-2014-monthly",
+  "study_scope": "public_fixed_etf_exploratory",
+  "paper_eligible": false,
+  "market": "INDIA_ETF",
+  "currency": "INR",
+  "rebalance_frequency": "ME",
+  "execution_lag_sessions": 1,
+  "annualization_factor": 252,
+  "transaction_cost_bps": 10.0,
+  "minimum_history_sessions": 252,
+  "minimum_eligible_assets": 10,
+  "long_only": true,
+  "max_weight": 0.1,
+  "edge_fraction": 0.1,
+  "seeds": [7, 17, 29, 43, 59]
+}

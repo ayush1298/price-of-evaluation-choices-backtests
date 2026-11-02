@@ -1,0 +1,59 @@
+{
+  "kind": "research-data-contract",
+  "schema_version": 1,
+  "contract_id": "public-us-etf-alternative-2010-v1",
+  "study_scope": "public_fixed_etf_confirmation_candidate",
+  "paper_eligible": false,
+  "market": {
+    "code": "US_ETF",
+    "currency": "USD"
+  },
+  "inputs": {
+    "prices": "data/public/us_etf_alternative_2010_v1/ohlcv_yfinance.csv",
+    "membership": "data/public/us_etf_alternative_2010_v1/membership_monthly.csv",
+    "universe": "configs/universes/us_etf_alternative_2010_v1.csv"
+  },
+  "declared_universe": {
+    "symbol_column": "symbol",
+    "expected_assets": 30,
+    "membership_must_match_declared": true
+  },
+  "validation": {
+    "require_ohlcv": true,
+    "required_price_columns": ["date", "symbol", "open", "high", "low", "close", "volume"],
+    "expected_price_assets": 30,
+    "minimum_start": "2010-01-01",
+    "minimum_end": "2025-12-31",
+    "rebalance_frequency": "ME",
+    "minimum_eligible_assets": 25,
+    "maximum_membership_staleness_days": 0
+  },
+  "source_sidecars": {
+    "prices": {
+      "required_values": {
+        "kind": "public-prototype-ohlcv-source",
+        "provider": "yfinance",
+        "auto_adjust": true,
+        "missing_symbol_policy": "reject",
+        "invalid_ohlcv_policy": "reject"
+      }
+    },
+    "membership": {
+      "required_values": {
+        "kind": "fixed-declared-universe-membership",
+        "rebalance_frequency": "ME",
+        "require_complete_rebalance_prices": true
+      }
+    }
+  },
+  "paper_limitations": [
+    "This is a fixed US-listed ETF allocation universe, not a historical stock-index constituent universe.",
+    "The data came from a public yfinance retrieval; archive source metadata and do not redistribute raw provider data.",
+    "The panel is a confirmation candidate only. Its results must remain unseen until the method/configuration is selected on the separate development track."
+  ],
+  "release_conditions": [
+    "The selected method and all hyperparameters must be frozen using only the public-us-etf-2010-v1 development contract before any return/model evaluation here.",
+    "Record this contract and its validation-report hashes as canonical run inputs, together with all raw-source sidecars.",
+    "Obtain an independent market or licensed point-in-time stock-universe replication before making a general outperformance claim."
+  ]
+}

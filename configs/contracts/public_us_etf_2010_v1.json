@@ -1,0 +1,57 @@
+{
+  "kind": "research-data-contract",
+  "schema_version": 1,
+  "contract_id": "public-us-etf-2010-v1",
+  "study_scope": "public_fixed_etf_development",
+  "paper_eligible": false,
+  "market": {
+    "code": "US_ETF",
+    "currency": "USD"
+  },
+  "inputs": {
+    "prices": "data/public/us_etf_2010_v1/ohlcv_yfinance.csv",
+    "membership": "data/public/us_etf_2010_v1/membership_monthly.csv",
+    "universe": "configs/universes/us_etf_2010_v1.csv"
+  },
+  "declared_universe": {
+    "symbol_column": "symbol",
+    "expected_assets": 30,
+    "membership_must_match_declared": true
+  },
+  "validation": {
+    "require_ohlcv": true,
+    "required_price_columns": ["date", "symbol", "open", "high", "low", "close", "volume"],
+    "expected_price_assets": 30,
+    "minimum_start": "2010-01-01",
+    "minimum_end": "2025-12-31",
+    "rebalance_frequency": "ME",
+    "minimum_eligible_assets": 25,
+    "maximum_membership_staleness_days": 0
+  },
+  "source_sidecars": {
+    "prices": {
+      "required_values": {
+        "kind": "public-prototype-ohlcv-source",
+        "provider": "yfinance",
+        "auto_adjust": true
+      }
+    },
+    "membership": {
+      "required_values": {
+        "kind": "fixed-declared-universe-membership",
+        "rebalance_frequency": "ME",
+        "require_complete_rebalance_prices": true
+      }
+    }
+  },
+  "paper_limitations": [
+    "The declared fixed ETF universe is valid for an ETF-allocation study, not a historical stock-index constituent claim.",
+    "yfinance is a public retrieval layer; preserve raw-download provenance and do not redistribute raw provider data.",
+    "Existing runs on this panel are development evidence and cannot serve as an untouched paper test."
+  ],
+  "release_conditions": [
+    "Use this panel only as a non-paper development/replication track until independently confirmed on an unexamined market or licensed point-in-time stock panel.",
+    "Record the contract hash and produced validation report as manifest inputs for every new run.",
+    "A refreshed price download changes the contract-validation report and requires a new data version, not an overwrite of the old evidence."
+  ]
+}

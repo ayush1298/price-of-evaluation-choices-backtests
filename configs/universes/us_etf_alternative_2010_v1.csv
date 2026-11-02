@@ -1,0 +1,31 @@
+symbol,asset_group,selection_rule
+VTI,US total equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+MDY,US mid-cap equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+IJR,US small-cap equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+IWD,US large-cap value equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+IWF,US large-cap growth equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+IVE,US S&P 500 value equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+IVW,US S&P 500 growth equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+DVY,US dividend equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+IYE,US energy industry equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+IYF,US financial industry equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+IYH,US health-care industry equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+IYJ,US industrial industry equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+IYK,US consumer-goods industry equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+IYM,US basic-materials industry equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+IYZ,US telecommunications industry equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+IYC,US consumer-services industry equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+IAI,US broker-dealer industry equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+ITB,US home-construction industry equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+XHB,US homebuilder industry equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+KBE,US bank industry equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+KIE,US insurance industry equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+XME,US metals-and-mining industry equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+XPH,US pharmaceutical industry equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+PBW,Clean-energy equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+EWL,Switzerland equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+EWN,Netherlands equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+EWP,Spain equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+EWI,Italy equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+EZA,South Africa equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe
+EIS,Israel equity,Blind pre-declared long-lived US-listed ETF excluded from the development universe

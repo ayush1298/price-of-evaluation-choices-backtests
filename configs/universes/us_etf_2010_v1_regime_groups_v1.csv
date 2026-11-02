@@ -1,0 +1,31 @@
+symbol,regime_group,grouping_rationale
+SPY,us_equity_core,Predeclared broad US equity exposure
+QQQ,us_equity_core,Predeclared US growth equity exposure
+DIA,us_equity_core,Predeclared US large-cap equity exposure
+IWM,us_equity_core,Predeclared US small-cap equity exposure
+XLB,us_sector_equity,Predeclared US sector equity exposure
+XLE,us_sector_equity,Predeclared US sector equity exposure
+XLF,us_sector_equity,Predeclared US sector equity exposure
+XLI,us_sector_equity,Predeclared US sector equity exposure
+XLK,us_sector_equity,Predeclared US sector equity exposure
+XLP,us_sector_equity,Predeclared US sector equity exposure
+XLU,us_sector_equity,Predeclared US sector equity exposure
+XLV,us_sector_equity,Predeclared US sector equity exposure
+XLY,us_sector_equity,Predeclared US sector equity exposure
+EFA,international_equity,Predeclared non-US or country equity exposure
+EEM,international_equity,Predeclared non-US or country equity exposure
+EWJ,international_equity,Predeclared non-US or country equity exposure
+EWG,international_equity,Predeclared non-US or country equity exposure
+EWU,international_equity,Predeclared non-US or country equity exposure
+EWQ,international_equity,Predeclared non-US or country equity exposure
+EWA,international_equity,Predeclared non-US or country equity exposure
+EWC,international_equity,Predeclared non-US or country equity exposure
+EWH,international_equity,Predeclared non-US or country equity exposure
+EWW,international_equity,Predeclared non-US or country equity exposure
+TLT,fixed_income,Predeclared Treasury or corporate bond exposure
+IEF,fixed_income,Predeclared Treasury or corporate bond exposure
+LQD,fixed_income,Predeclared Treasury or corporate bond exposure
+HYG,fixed_income,Predeclared Treasury or corporate bond exposure
+VNQ,diversifiers,Predeclared real asset or alternative exposure
+GLD,diversifiers,Predeclared real asset or alternative exposure
+DBC,diversifiers,Predeclared real asset or alternative exposure

@@ -1,0 +1,89 @@
+symbol,asset_group,selection_rule
+CMCSA,Communication Services,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+DIS,Communication Services,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+EA,Communication Services,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+GOOGL,Communication Services,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+OMC,Communication Services,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+PSKY,Communication Services,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+T,Communication Services,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+VZ,Communication Services,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+AMZN,Consumer Discretionary,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+AZO,Consumer Discretionary,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+BBY,Consumer Discretionary,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+BKNG,Consumer Discretionary,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+CCL,Consumer Discretionary,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+DHI,Consumer Discretionary,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+DRI,Consumer Discretionary,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+EBAY,Consumer Discretionary,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+ADM,Consumer Staples,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+BF-B,Consumer Staples,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+CL,Consumer Staples,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+CLX,Consumer Staples,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+COST,Consumer Staples,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+EL,Consumer Staples,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+GIS,Consumer Staples,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+HRL,Consumer Staples,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+APA,Energy,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+COP,Energy,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+CVX,Energy,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+DVN,Energy,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+EOG,Energy,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+HAL,Energy,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+OXY,Energy,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+SLB,Energy,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+AFL,Financials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+AIG,Financials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+AIZ,Financials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+ALL,Financials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+AMP,Financials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+AON,Financials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+AXP,Financials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+BAC,Financials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+A,Health Care,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+ABT,Health Care,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+AMGN,Health Care,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+BAX,Health Care,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+BDX,Health Care,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+BIIB,Health Care,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+BMY,Health Care,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+BSX,Health Care,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+ADP,Industrials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+BA,Industrials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+CAT,Industrials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+CHRW,Industrials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+CMI,Industrials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+CSX,Industrials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+CTAS,Industrials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+DE,Industrials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+AAPL,Information Technology,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+ADBE,Information Technology,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+ADI,Information Technology,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+ADSK,Information Technology,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+AKAM,Information Technology,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+AMAT,Information Technology,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+APH,Information Technology,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+CRM,Information Technology,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+APD,Materials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+AVY,Materials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+BALL,Materials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+CF,Materials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+ECL,Materials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+IFF,Materials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+IP,Materials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+LIN,Materials,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+AMT,Real Estate,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+AVB,Real Estate,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+BXP,Real Estate,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+CBRE,Real Estate,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+DOC,Real Estate,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+EQR,Real Estate,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+HST,Real Estate,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+IRM,Real Estate,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+AEE,Utilities,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+AEP,Utilities,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+AES,Utilities,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+CMS,Utilities,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+CNP,Utilities,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+DTE,Utilities,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+DUK,Utilities,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection
+ED,Utilities,current-survivor exploratory cohort with complete daily coverage from 2010-01-04 through 2025-12-31; current S&P index entry by study start; alphabetical sector selection

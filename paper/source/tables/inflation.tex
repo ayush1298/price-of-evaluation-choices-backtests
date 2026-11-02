@@ -1,0 +1,44 @@
+\begin{table*}[t]
+\centering
+\caption{Measured inflation from each evaluation choice, grouped by the choice
+isolated. Each row reads the same runs twice, holding the panel, strategy, allocator,
+cost model and execution rule fixed. Rows marked \emph{sealed} were computed on the
+confirmation panel, which had never been examined when the earlier rows were produced.
+Inflation is the reported value minus the adjusted one, computed from unrounded values;
+columns are rounded to three decimals, so a difference taken from them can disagree in the
+last digit. The search-multiplicity group reports $p$-values rather than Sharpe
+ratios, so its inflation is a difference in $p$. Sharpe cells aggregate seeds by the
+estimator the frozen protocol declared, mean at five epochs and median in the
+declared-budget experiment.}
+\label{tab:inflation}
+\small
+\begin{tabular}{p{2.6cm}p{5.0cm}p{4.2cm}rrr}
+\toprule
+Choice & Panel / strategy & Reading & Reported & Adjusted & Inflation \\
+\midrule
+Development boundary & US 30-ETF: Causal dynamic graph-temporal model, 5 epochs & development vs held out & $0.775$ & $0.685$ & $\mathbf{+0.090}$ \\
+ & US 30-ETF, declared 20-epoch training budget: Dynamic graph-temporal, 5 seeds (equal weight: 0.792 development, 0.718 outer) & development vs held out & $0.930$ & $0.604$ & $\mathbf{+0.326}$ \\
+\addlinespace[2pt]
+Seed selection & US 30-ETF: Causal dynamic graph-temporal model, outer window & best seed vs median & $0.734$ & $0.729$ & $\mathbf{+0.005}$ \\
+ & US 50-ETF: Causal dynamic graph-temporal model, development window & best seed vs median & $1.261$ & $0.759$ & $\mathbf{+0.502}$ \\
+ & Confirmation panel, 2020+ secondary window (sealed): Dynamic graph-temporal; best baseline on this window is 0.737 & best seed vs median & $0.799$ & $0.714$ & $\mathbf{+0.085}$ \\
+\addlinespace[2pt]
+Trading costs & US 30-ETF: Causal dynamic graph-temporal model (mean one-way turnover 56\%/month) & gross vs net of 10\,bps & $0.731$ & $0.500$ & $\mathbf{+0.232}$ \\
+ & US 30-ETF: Equal weight (low-turnover control: the shortcut should barely move it) & gross vs net of 10\,bps & $0.720$ & $0.710$ & $\mathbf{+0.010}$ \\
+ & Confirmation panel (US 30-ETF, sealed): Dynamic graph-temporal, seed 7 (48.9\%/month turnover) & gross vs net of 10\,bps & $0.735$ & $0.568$ & $\mathbf{+0.167}$ \\
+ & Confirmation panel (US 30-ETF, sealed): Equal weight (low-turnover control: 2.0\%/month) & gross vs net of 10\,bps & $0.680$ & $0.673$ & $\mathbf{+0.007}$ \\
+\addlinespace[2pt]
+Benchmark choice & Confirmation panel (US 30-ETF, sealed): Dynamic graph-temporal, best seed vs the six pre-declared baselines & one baseline vs ladder & $+0.045$ & $-0.025$ & $\mathbf{+0.070}$\,$\dagger$ \\
+\addlinespace[2pt]
+Date alignment & Confirmation panel, quarterly rebalance (sealed): Dynamic graph-temporal seed 7 (24-quarter warm-up starts 2020) vs equal weight & own dates vs matched & $+0.538$ & $+0.045$ & $\mathbf{+0.493}$ \\
+\addlinespace[2pt]
+Search multiplicity & US 30-ETF: HMM cond.\ risk (2, 252), 9-cell grid vs matched HRP-756 control & best cell vs corrected & $0.359$ & $0.680$ & $\mathbf{+0.321}$ \\
+ & Confirmation panel (US 30-ETF, sealed): Seven-candidate confirmation family vs strongest baseline & best cell vs corrected & $0.131$ & $0.344$ & $\mathbf{+0.213}$ \\
+ & Confirmation panel, 2020+ secondary window (sealed): Seed 7 alone vs the seven-candidate family, against the strongest baseline & best cell vs corrected & $0.065$ & $0.185$ & $\mathbf{+0.120}$ \\
+\addlinespace[2pt]
+Combined choices & US 30-ETF, declared 20-epoch budget: Development window, best seed, zero costs, against held-out median at 10 bps & three choices at once vs adjusted & $1.095$ & $0.604$ & $\mathbf{+0.491}$ \\
+\bottomrule
+\end{tabular}
+\\[2pt]
+\footnotesize $\dagger$ the sign of the conclusion changes, not merely its magnitude.
+\end{table*}

@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\caption{Cap and rebalance-frequency robustness (net Sharpe). A 2\% cap is
+arithmetically impossible on a 30-asset universe and is not attempted.
+Both regime candidates fail outright under quarterly rebalancing.}
+\label{tab:robustness}
+\footnotesize
+\begin{tabular}{lrrr}
+\toprule
+Strategy & 10\% mon. & 5\% mon. & 10\% qtr. \\
+\midrule
+Partial-corr., CVaR & 0.748 & 0.728 & 0.672 \\
+PCC hub-avoid, CVaR & 0.723 & 0.722 & 0.667 \\
+Inverse volatility & 0.708 & 0.708 & 0.674 \\
+HRP (252) & 0.704 & 0.698 & 0.668 \\
+HRP (756) & 0.695 & 0.699 & 0.665 \\
+\emph{HMM cond.\ risk} & 0.697 & 0.696 & \textbf{fails} \\
+\emph{Soft-regime cond.\ covariance} & 0.686 & 0.690 & \textbf{fails} \\
+Equal weight & 0.678 & 0.678 & 0.646 \\
+\bottomrule
+\end{tabular}
+\end{table}

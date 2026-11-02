@@ -1,0 +1,32 @@
+{
+  "experiment_name": "public-us-etf-2010-monthly-hmm-mixture",
+  "study_scope": "public_fixed_etf_exploratory",
+  "paper_eligible": false,
+  "market": "US_ETF",
+  "rebalance_frequency": "ME",
+  "execution_lag_sessions": 1,
+  "annualization_factor": 252,
+  "transaction_cost_bps": 10.0,
+  "minimum_history_sessions": 252,
+  "minimum_eligible_assets": 25,
+  "long_only": true,
+  "max_weight": 0.1,
+  "regime": {
+    "model": "expanding_gaussian_hmm",
+    "n_components": 3,
+    "minimum_training_observations": 36,
+    "features": [
+      "realized_volatility",
+      "trailing_market_return",
+      "market_drawdown",
+      "cross_sectional_dispersion"
+    ],
+    "ordering_feature": "realized_volatility",
+    "state_strategies": {
+      "0": {"graph_method": "pcc", "selector": "hub_avoid", "allocator": "inverse_volatility", "edge_fraction": 0.05},
+      "1": {"graph_method": "partial_correlation", "selector": "hub_avoid", "allocator": "mean_cvar", "edge_fraction": 0.05},
+      "2": {"graph_method": "partial_correlation", "selector": "all", "allocator": "mean_cvar", "edge_fraction": 0.05}
+    }
+  },
+  "seeds": [7, 17, 29, 43, 59]
+}

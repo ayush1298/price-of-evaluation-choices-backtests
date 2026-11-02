@@ -1,0 +1,19 @@
+{
+  "experiment_name": "exploratory-nifty50-community-membership-yahoo-prices-2008-monthly",
+  "study_scope": "exploratory_community_membership_partial_yahoo_price_coverage",
+  "paper_eligible": false,
+  "market": "INDIA_NIFTY50_COMMUNITY_EXPLORATORY",
+  "currency": "INR",
+  "rebalance_frequency": "ME",
+  "execution_lag_sessions": 1,
+  "annualization_factor": 252,
+  "transaction_cost_bps": 10.0,
+  "minimum_history_sessions": 252,
+  "minimum_eligible_assets": 40,
+  "long_only": true,
+  "max_weight": 0.05,
+  "edge_fraction": 0.05,
+  "price_adjustment_status": "yfinance_auto_adjust_true_provider_adjustment_not_independently_reconciled",
+  "historical_membership_status": "community_source_monthly_event_snapshots_pending_official_reconciliation; partial_price_coverage",
+  "seeds": [7, 17, 29, 43, 59]
+}

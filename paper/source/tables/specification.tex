@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering
+\caption{Candidate specifications: mechanism, matched comparator, and what each
+comparison isolates. Every candidate sends its output through the shared allocator of
+Section~\ref{sec:apparatus}, so a comparison differs only in the component named.
+Seeds are the prescribed set $\{7, 17, 29, 43, 59\}$ where a method is stochastic.}
+\label{tab:spec}
+\footnotesize
+\begin{tabular}{p{2.7cm}p{5.1cm}p{4.0cm}p{2.9cm}r}
+\toprule
+Family & Mechanism & Matched comparator & Isolates & Seeds \\
+\midrule
+Soft-regime cond.\ covariance & expanding soft $k$-means, 3 states, on four market features; state-mixed shrinkage covariance, 756-session lookback & matched unconditional risk: the same HRP allocation on an unconditional covariance & isolates the state mixture & 1 \\
+HMM cond.\ risk (2, 252) & expanding Gaussian HMM, 2 states, 252-session covariance lookback, entropy fallback to unconditional risk & matched HRP-756, the stronger unconditional control; the lookback-matched HRP-252 gives $p{=}0.209$ & isolates state conditioning & 1 \\
+9-cell HMM grid & the same model over states $\in\{2,3,4\}$ and lookback $\in\{63,126,252\}$ sessions & matched HRP-756 & prices the search over those two axes & 1 \\
+Group-aware cond.\ covariance & as the HMM candidate, but state conditioning retained only within five ex-ante asset groups & matched global-HMM risk & isolates cross-group conditioning & 1 \\
+Edge-masked graph attention & attention over the sparsified graph in place of similarity message passing & similarity passing: the same encoder with fixed weights & isolates learned edge weighting & 5 \\
+IC training objective & ranking-aligned loss on the cross-sectional information coefficient & likelihood-only: the same model under a Gaussian likelihood & isolates the training objective & 5 \\
+Regime-conditioned variants & regime probabilities entering the model by direct concatenation, by gated expert heads, or through a VIX covariate & regime-free model: the same architecture without state input & isolates regime conditioning & 5 \\
+Dynamic graph-temporal & partial-correlation graph, 252-session lookback, 5\% edges; 2 graph layers into a 2-layer, 4-head Transformer, $d{=}48$, sequence length 12 & its graph-only and temporal-only ablations, and equal weight & isolates each stage, then the whole model & 5 \\
+\bottomrule
+\end{tabular}
+\end{table*}

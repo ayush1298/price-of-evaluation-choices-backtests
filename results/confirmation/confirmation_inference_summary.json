@@ -1,0 +1,142 @@
+{
+  "kind": "track-b-confirmation-inference",
+  "ledger": "configs/ledgers/public_us_etf_alternative_confirmation_v1.json",
+  "benchmark_run_id": "alt-etf-confirm-equal-weight",
+  "baseline_sharpes": {
+    "alt-etf-confirm-equal-weight": 0.678334265761334,
+    "alt-etf-confirm-inverse-vol": 0.707857862342092,
+    "alt-etf-confirm-hrp-252": 0.7039125502195087,
+    "alt-etf-confirm-hrp-756": 0.6947983647817743,
+    "alt-etf-confirm-pcc-hub-avoid-cvar": 0.7227282925015184,
+    "alt-etf-confirm-partial-hub-avoid-cvar": 0.7481996209761038
+  },
+  "best_baseline_run_id": "alt-etf-confirm-partial-hub-avoid-cvar",
+  "comparisons": [
+    {
+      "candidate": "alt-etf-confirm-soft-regime-conditional-hrp",
+      "comparator": "alt-etf-confirm-equal-weight",
+      "comparison": "vs_equal_weight",
+      "annualized_excess_return": -0.007103726727903009,
+      "observed_annualized_sharpe_difference": 0.007933942249596648,
+      "one_sided_p_value": 0.888622275544891,
+      "observations": 3137
+    },
+    {
+      "candidate": "alt-etf-confirm-soft-regime-conditional-hrp",
+      "comparator": "alt-etf-confirm-partial-hub-avoid-cvar",
+      "comparison": "vs_best_baseline",
+      "annualized_excess_return": 0.00024238401187604588,
+      "observed_annualized_sharpe_difference": -0.06193141296517268,
+      "one_sided_p_value": 0.48530293941211755,
+      "observations": 3137
+    },
+    {
+      "candidate": "alt-etf-confirm-hmm-risk-h2-l252-b0",
+      "comparator": "alt-etf-confirm-equal-weight",
+      "comparison": "vs_equal_weight",
+      "annualized_excess_return": -0.006379965939050349,
+      "observed_annualized_sharpe_difference": 0.01863648338701318,
+      "one_sided_p_value": 0.8512297540491902,
+      "observations": 3137
+    },
+    {
+      "candidate": "alt-etf-confirm-hmm-risk-h2-l252-b0",
+      "comparator": "alt-etf-confirm-partial-hub-avoid-cvar",
+      "comparison": "vs_best_baseline",
+      "annualized_excess_return": 0.0009661448007287106,
+      "observed_annualized_sharpe_difference": -0.05122887182775615,
+      "one_sided_p_value": 0.4513097380523895,
+      "observations": 3137
+    },
+    {
+      "candidate": "alt-etf-confirm-dynamic-seed7",
+      "comparator": "alt-etf-confirm-equal-weight",
+      "comparison": "vs_equal_weight",
+      "annualized_excess_return": 0.0019526744163349031,
+      "observed_annualized_sharpe_difference": 0.022199307276590252,
+      "one_sided_p_value": 0.4277144571085783,
+      "observations": 3120
+    },
+    {
+      "candidate": "alt-etf-confirm-dynamic-seed7",
+      "comparator": "alt-etf-confirm-partial-hub-avoid-cvar",
+      "comparison": "vs_best_baseline",
+      "annualized_excess_return": 0.011418843225089282,
+      "observed_annualized_sharpe_difference": -0.04766604793817908,
+      "one_sided_p_value": 0.23635272945410918,
+      "observations": 3120
+    },
+    {
+      "candidate": "alt-etf-confirm-dynamic-seed17",
+      "comparator": "alt-etf-confirm-equal-weight",
+      "comparison": "vs_equal_weight",
+      "annualized_excess_return": -0.0036674554803688324,
+      "observed_annualized_sharpe_difference": 0.002726632169438914,
+      "one_sided_p_value": 0.6454709058188363,
+      "observations": 3120
+    },
+    {
+      "candidate": "alt-etf-confirm-dynamic-seed17",
+      "comparator": "alt-etf-confirm-partial-hub-avoid-cvar",
+      "comparison": "vs_best_baseline",
+      "annualized_excess_return": 0.005798713328385541,
+      "observed_annualized_sharpe_difference": -0.06713872304533042,
+      "one_sided_p_value": 0.3385322935412917,
+      "observations": 3120
+    },
+    {
+      "candidate": "alt-etf-confirm-dynamic-seed29",
+      "comparator": "alt-etf-confirm-equal-weight",
+      "comparison": "vs_equal_weight",
+      "annualized_excess_return": -0.013458725628318005,
+      "observed_annualized_sharpe_difference": -0.08077223060013072,
+      "one_sided_p_value": 0.8888222355528894,
+      "observations": 3120
+    },
+    {
+      "candidate": "alt-etf-confirm-dynamic-seed29",
+      "comparator": "alt-etf-confirm-partial-hub-avoid-cvar",
+      "comparison": "vs_best_baseline",
+      "annualized_excess_return": -0.003992556819563632,
+      "observed_annualized_sharpe_difference": -0.15063758581490005,
+      "one_sided_p_value": 0.6002799440111978,
+      "observations": 3120
+    },
+    {
+      "candidate": "alt-etf-confirm-dynamic-seed43",
+      "comparator": "alt-etf-confirm-equal-weight",
+      "comparison": "vs_equal_weight",
+      "annualized_excess_return": -0.012329398272336298,
+      "observed_annualized_sharpe_difference": -0.06345621536473312,
+      "one_sided_p_value": 0.8872225554889022,
+      "observations": 3120
+    },
+    {
+      "candidate": "alt-etf-confirm-dynamic-seed43",
+      "comparator": "alt-etf-confirm-partial-hub-avoid-cvar",
+      "comparison": "vs_best_baseline",
+      "annualized_excess_return": -0.0028632294635819256,
+      "observed_annualized_sharpe_difference": -0.13332157057950245,
+      "one_sided_p_value": 0.5704859028194361,
+      "observations": 3120
+    },
+    {
+      "candidate": "alt-etf-confirm-dynamic-seed59",
+      "comparator": "alt-etf-confirm-equal-weight",
+      "comparison": "vs_equal_weight",
+      "annualized_excess_return": 0.007574812847722315,
+      "observed_annualized_sharpe_difference": 0.04476362249370058,
+      "one_sided_p_value": 0.22635472905418916,
+      "observations": 3120
+    },
+    {
+      "candidate": "alt-etf-confirm-dynamic-seed59",
+      "comparator": "alt-etf-confirm-partial-hub-avoid-cvar",
+      "comparison": "vs_best_baseline",
+      "annualized_excess_return": 0.01704098165647669,
+      "observed_annualized_sharpe_difference": -0.025101732721068748,
+      "one_sided_p_value": 0.131373725254949,
+      "observations": 3120
+    }
+  ]
+}

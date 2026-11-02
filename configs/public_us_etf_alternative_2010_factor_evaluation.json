@@ -1,0 +1,22 @@
+{
+  "experiment_name": "public-us-etf-alternative-2010-fama-french-five-factor-evaluation",
+  "study_scope": "public_fixed_etf_auxiliary_analysis",
+  "paper_eligible": false,
+  "factor_model": "fama_french_5_daily_ols_newey_west",
+  "factor_columns": [
+    "Mkt-RF",
+    "SMB",
+    "HML",
+    "RMW",
+    "CMA"
+  ],
+  "risk_free_column": "RF",
+  "factor_return_units": "decimal_daily",
+  "portfolio_return_units": "decimal_daily_net_of_transaction_costs",
+  "annualization_factor": 252,
+  "hac_lags": 5,
+  "data_contract_id": "public-us-etf-alternative-2010-v1",
+  "confirmation_notes": [
+    "Auxiliary factor analysis of Track-B confirmation runs. Settings copied unchanged from the Track-A factor config."
+  ]
+}

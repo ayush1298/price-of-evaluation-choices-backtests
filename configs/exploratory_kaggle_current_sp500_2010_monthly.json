@@ -1,0 +1,19 @@
+{
+  "experiment_name": "exploratory-kaggle-current-sp500-survivor-entry-2010-monthly",
+  "study_scope": "exploratory_survivor_only_not_paper_eligible",
+  "market": "US_CURRENT_SURVIVOR_EXPLORATORY",
+  "currency": "USD",
+  "rebalance_frequency": "ME",
+  "execution_lag_sessions": 1,
+  "annualization_factor": 252,
+  "transaction_cost_bps": 10.0,
+  "minimum_history_sessions": 252,
+  "minimum_eligible_assets": 88,
+  "long_only": true,
+  "max_weight": 0.05,
+  "edge_fraction": 0.05,
+  "price_adjustment_status": "provider_close_as_downloaded_adjustment_not_independently_verified",
+  "historical_membership_status": "current-survivor roster with entry-date filter; removed constituents unavailable",
+  "paper_eligible": false,
+  "seeds": [7, 17, 29, 43, 59]
+}

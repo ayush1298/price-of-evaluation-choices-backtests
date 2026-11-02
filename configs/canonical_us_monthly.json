@@ -1,0 +1,20 @@
+{
+  "experiment_name": "canonical-us-monthly",
+  "study_scope": "pre_data_gate_candidate",
+  "paper_eligible": false,
+  "market": "US",
+  "rebalance_frequency": "ME",
+  "execution_lag_sessions": 1,
+  "annualization_factor": 252,
+  "transaction_cost_bps": 10.0,
+  "minimum_history_sessions": 252,
+  "minimum_eligible_assets": 30,
+  "long_only": true,
+  "max_weight": 0.05,
+  "regime": {
+    "baseline": "expanding_kmeans",
+    "n_clusters": 3,
+    "minimum_training_observations": 36
+  },
+  "seeds": [7, 17, 29, 43, 59]
+}

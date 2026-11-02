@@ -1,0 +1,12 @@
+{
+  "observations": 1610,
+  "block_length": 21,
+  "replications": 5000,
+  "annualization_factor": 252,
+  "mean_daily_excess_return": -2.2293655903867414e-06,
+  "annualized_excess_return": -0.0005618001287774589,
+  "observed_annualized_sharpe_difference": -0.1397364290767349,
+  "bootstrap_ci_low": -0.00021793719904327638,
+  "bootstrap_ci_high": 0.00021073801809582454,
+  "one_sided_p_value": 0.5218956208758249
+}

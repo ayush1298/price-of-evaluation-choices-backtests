@@ -1,0 +1,27 @@
+\begin{table}[t]
+\centering
+\caption{Confirmation-panel ladder. Net of 10\,bps one-way costs, 10\% cap,
+one-session execution lag, monthly rebalance, first signal 2014-01-31.
+Turnover is mean realised one-way turnover per execution. Italicised rows
+are the pre-registered candidates. No candidate leads, nor does any buy rank
+by taking more drawdown, tail, or trading risk.}
+\label{tab:confirmation}
+\footnotesize
+\begin{tabular}{lrrrr}
+\toprule
+Strategy & Sharpe & Max DD & CVaR$_{95}$ & Turn. \\
+\midrule
+Partial-corr.\ hub-avoid, CVaR & \textbf{0.748} & $-34.3$\% & $-2.29$\% & 14.4\% \\
+PCC hub-avoid, CVaR & 0.723 & $-36.0$\% & $-2.32$\% & 10.9\% \\
+Inverse volatility & 0.708 & $-38.3$\% & $-2.57$\% & 2.2\% \\
+HRP (252) & 0.704 & $-37.7$\% & $-2.48$\% & 7.6\% \\
+\emph{HMM cond.\ risk (2, 252)} & 0.697 & $-37.7$\% & $-2.48$\% & 8.7\% \\
+HRP (756) & 0.695 & $-38.1$\% & $-2.51$\% & 5.6\% \\
+\emph{Soft-regime cond.\ covariance} & 0.686 & $-37.7$\% & $-2.50$\% & 8.1\% \\
+Equal weight & 0.678 & $-39.2$\% & $-2.66$\% & 2.0\% \\
+\midrule
+\emph{Dynamic, 5-seed median} & 0.681 & --- & --- & 48.9\% \\
+\quad seed range & 0.598--0.723 & --- & --- & --- \\
+\bottomrule
+\end{tabular}
+\end{table}

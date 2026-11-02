@@ -1,0 +1,54 @@
+{
+  "experiment_name": "public-us-etf-alternative-2010-hmm-uncertainty-risk-v1-cap5",
+  "study_scope": "public_fixed_etf_confirmation",
+  "paper_eligible": false,
+  "data_contract_id": "public-us-etf-alternative-2010-v1",
+  "market": "US_ETF",
+  "rebalance_frequency": "ME",
+  "execution_lag_sessions": 1,
+  "annualization_factor": 252,
+  "transaction_cost_bps": 10.0,
+  "minimum_history_sessions": 252,
+  "minimum_eligible_assets": 25,
+  "long_only": true,
+  "max_weight": 0.05,
+  "allocation": {
+    "min_rebalance_turnover": 0.0
+  },
+  "regime": {
+    "model": "expanding_gaussian_hmm",
+    "n_components": 3,
+    "minimum_training_observations": 36,
+    "n_iter": 200,
+    "covariance_type": "diag",
+    "startprob_prior": 1.1,
+    "transmat_prior": 1.1,
+    "ordering_feature": "realized_volatility",
+    "features": [
+      "realized_volatility",
+      "trailing_market_return",
+      "market_drawdown",
+      "cross_sectional_dispersion"
+    ]
+  },
+  "conditional_risk": {
+    "lookback_sessions": 252,
+    "minimum_effective_observations": 21,
+    "covariance_shrinkage": 0.25,
+    "uncertainty_to_unconditional": true,
+    "minimum_regime_confidence": 0.1
+  },
+  "confirmation_notes": [
+    "Track-B confirmation port. Every numeric setting is copied unchanged from the",
+    "frozen Track-A configuration; only experiment_name, study_scope, and",
+    "data_contract_id differ. Governed by docs/ICAIF_CHARTER_AMENDMENT_V3_CONFIRMATION.md.",
+    "No value in this file may be re-tuned after any Track-B metric is read."
+  ],
+  "robustness_notes": [
+    "Robustness variant of the frozen Track-B configuration. Exactly one setting",
+    "differs from its source config; every other value is copied unchanged.",
+    "Declared by ICAIF_EXPERIMENT_PROTOCOL.md's cost/cap/frequency robustness matrix.",
+    "This is reported robustness, never a selection opportunity.",
+    "Variant: max_weight 0.10 -> 0.05."
+  ]
+}

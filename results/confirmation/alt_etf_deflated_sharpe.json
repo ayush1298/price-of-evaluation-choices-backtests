@@ -1,0 +1,32 @@
+{
+  "kind": "deflated-sharpe-diagnostic",
+  "candidate_ledger": {
+    "path": "configs/ledgers/public_us_etf_alternative_confirmation_v1.json",
+    "sha256": "6a704c0c4697ca7aadccc1b21e890d0e6c8d2bc1b55468962133b249eb04cd20"
+  },
+  "n_trials": 13,
+  "trial_daily_sharpes": {
+    "alt-etf-confirm-soft-regime-conditional-hrp": 0.04323083359730616,
+    "alt-etf-confirm-hmm-risk-h2-l252-b0": 0.04390503031745003,
+    "alt-etf-confirm-dynamic-seed7": 0.04412946712642481,
+    "alt-etf-confirm-dynamic-seed17": 0.042902803895599084,
+    "alt-etf-confirm-dynamic-seed29": 0.037642869951670724,
+    "alt-etf-confirm-dynamic-seed43": 0.03873367638051519,
+    "alt-etf-confirm-dynamic-seed59": 0.04555088537806634,
+    "alt-etf-confirm-equal-weight": 0.042731042213763754,
+    "alt-etf-confirm-inverse-vol": 0.04459085398426092,
+    "alt-etf-confirm-hrp-252": 0.044342322681382766,
+    "alt-etf-confirm-hrp-756": 0.043768182965402434,
+    "alt-etf-confirm-pcc-hub-avoid-cvar": 0.045527603034032145,
+    "alt-etf-confirm-partial-hub-avoid-cvar": 0.04713214590798921
+  },
+  "best_run_id": "alt-etf-confirm-partial-hub-avoid-cvar",
+  "result": {
+    "observations": 3137,
+    "trials": 13,
+    "observed_periodic_sharpe": 0.04713214590798921,
+    "expected_max_trial_sharpe": 0.04785040801842856,
+    "deflated_sharpe_probability": 0.4843570851469553
+  },
+  "warning": "The trial set must be the complete search family. This diagnostic addresses configuration mining only; it is not an untouched outer test."
+}

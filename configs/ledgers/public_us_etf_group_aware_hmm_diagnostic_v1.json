@@ -1,0 +1,25 @@
+{
+  "kind": "validation-candidate-ledger",
+  "schema_version": 1,
+  "ledger_id": "public-us-etf-group-aware-hmm-diagnostic-v1",
+  "study_scope": "public_fixed_etf_development_group_aware_diagnostic",
+  "data_contract_id": "public-us-etf-2010-v1",
+  "selection_permitted": false,
+  "selection_metric": "sharpe",
+  "validation_window": {
+    "first_signal_date": "2014-01-31",
+    "last_signal_date": "2019-12-31"
+  },
+  "candidates": [
+    {
+      "candidate_id": "group-aware-hmm-2-lookback-252-band-0",
+      "run_id": "public-etf-dev-group-aware-hmm-risk-h2-l252-b0-v1",
+      "expected_manifest_values": {
+        "extra.hmm.n_components": 2,
+        "extra.conditional_risk.lookback_sessions": 252,
+        "extra.conditional_risk.group_aware_within_group_only": true,
+        "extra.backtest.min_rebalance_turnover": 0.0
+      }
+    }
+  ]
+}

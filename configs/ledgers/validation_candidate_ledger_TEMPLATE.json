@@ -1,0 +1,22 @@
+{
+  "kind": "validation-candidate-ledger",
+  "schema_version": 1,
+  "ledger_id": "replace-with-frozen-ledger-id",
+  "study_scope": "replace-with-study-scope",
+  "data_contract_id": "replace-with-data-contract-id",
+  "selection_permitted": true,
+  "selection_metric": "sharpe",
+  "validation_window": {
+    "first_signal_date": "YYYY-MM-DD",
+    "last_signal_date": "YYYY-MM-DD"
+  },
+  "candidates": [
+    {
+      "candidate_id": "replace-with-candidate-id",
+      "run_id": "replace-with-canonical-run-id",
+      "expected_manifest_values": {
+        "extra.example_parameter": "replace-with-predeclared-value"
+      }
+    }
+  ]
+}

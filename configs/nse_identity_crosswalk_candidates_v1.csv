@@ -1,0 +1,14 @@
+source_symbol,asset_id,provider_symbol,start_date,end_date,isin,relationship,continuity,verification_status,evidence_url,source_record_id
+INFY,INE009A01021,INFOSYSTCH,2008-01-01,2011-06-28,INE009A01021,same_security_rename,continuous,candidate,https://www.infosys.com/investors/reports-filings/quarterly-results/2010-2011/q1/documents/q1-2011.pdf,INFOSYS_Q1_2011_NSE_LISTING
+INFY,INE009A01021,INFY,2011-06-29,2025-08-31,INE009A01021,same_security_rename,continuous,candidate,https://www.infosys.com/investors/reports-filings/quarterly-results/2010-2011/q1/documents/q1-2011.pdf,INFOSYS_NSE_CODE_SWITCH_20110629
+HEROMOTOCO,INE158A01026,HEROHONDA,2008-01-01,2011-08-05,INE158A01026,same_security_rename,continuous,candidate,https://www.heromotocorp.com/content/dam/hero-aem-website/in/investors/financial-results/annual-reports/annual-reports/20130425170052-pdf-408.pdf,HERO_NAME_CHANGE_20110728
+HEROMOTOCO,INE158A01026,HEROMOTOCO,2011-08-08,2025-08-31,INE158A01026,same_security_rename,continuous,candidate,https://www.heromotocorp.com/content/dam/hero-aem-website/in/investors/financial-results/annual-reports/annual-reports/20130425170052-pdf-408.pdf,HERO_NSE_CODE_SWITCH_20110808
+RELINFRA,INE036A01016,REL,2008-01-01,2008-05-15,INE036A01016,same_security_rename,continuous,candidate,https://www.rinfra.com/share-trading,RINFRA_PHYSICAL_ELECTRONIC_CODES
+RELINFRA,INE036A01016,RELINFRA,2008-05-16,2025-08-31,INE036A01016,same_security_rename,continuous,candidate,https://www.rinfra.com/share-trading,RINFRA_NSE_CODE_SWITCH_20080516
+TATACOMM,INE151A01013,VSNL,2008-01-01,2008-02-22,INE151A01013,same_security_rename,continuous,candidate,https://www.tatacommunications.com/about/faq,TATACOMM_NAME_OF_VSNL
+TATACOMM,INE151A01013,TATACOMM,2008-02-25,2025-08-31,INE151A01013,same_security_rename,continuous,candidate,https://www.tatacommunications.com/about/faq,TATACOMM_NSE_CODE_SWITCH_20080225
+VEDL,INE205A01025,SSLT,2013-10-01,2015-05-06,INE205A01025,same_security_rename,continuous,candidate,https://vedantalimited.com/img/media_mentions/press_release/2013-09-20-ved-name-change-sesa-sterlite-final.pdf,VEDANTA_SSLT_TO_VEDL_REVIEW
+VEDL,INE205A01025,VEDL,2015-05-07,2025-08-31,INE205A01025,same_security_rename,continuous,candidate,https://vedantalimited.com/img/media_mentions/press_release/vedl-notice-share-holders-ccm-postal.pdf,VEDANTA_NSE_CODE_SWITCH_20150507
+ETERNAL,INE758T01015,ZOMATO,2021-07-23,2025-04-08,INE758T01015,same_security_rename,continuous,candidate,https://nsearchives.nseindia.com/content/circulars/FAOP67437.pdf,ETERNAL_NSE_CIRCULAR_20250404
+ETERNAL,INE758T01015,ETERNAL,2025-04-09,2025-08-31,INE758T01015,same_security_rename,continuous,candidate,https://nsearchives.nseindia.com/content/circulars/FAOP67437.pdf,ETERNAL_NSE_CODE_SWITCH_20250409
+BAJAJAUTO,INE917I01010,BAJAJ-AUTO,2010-01-01,2025-08-31,INE917I01010,reorganisation_successor,break,candidate,https://nsearchives.nseindia.com/content/press/22052008.htm,BAJAJ_AUTO_RELISTING_20080526

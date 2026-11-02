@@ -1,0 +1,32 @@
+{
+  "kind": "deflated-sharpe-diagnostic",
+  "candidate_ledger": {
+    "path": "configs/ledgers/public_us_etf_alternative_confirmation_secondary_2020_v1.json",
+    "sha256": "1a3a4bdf5ff1f996b1e5e05c3b3c1dda1410f52e4a5a88454b786d9c23e8d606"
+  },
+  "n_trials": 13,
+  "trial_daily_sharpes": {
+    "alt-etf-confirm2020-soft-regime-conditional-hrp": 0.04339991295455485,
+    "alt-etf-confirm2020-hmm-risk-h2-l252-b0": 0.04479071808758008,
+    "alt-etf-confirm2020-dynamic-seed7": 0.05034102704745928,
+    "alt-etf-confirm2020-dynamic-seed17": 0.04496498739614692,
+    "alt-etf-confirm2020-dynamic-seed29": 0.03763119567333278,
+    "alt-etf-confirm2020-dynamic-seed43": 0.040292532418975666,
+    "alt-etf-confirm2020-dynamic-seed59": 0.04678478587663843,
+    "alt-etf-confirm2020-equal-weight": 0.04476110939595423,
+    "alt-etf-confirm2020-inverse-vol": 0.04545286418482719,
+    "alt-etf-confirm2020-hrp-252": 0.044819163942099886,
+    "alt-etf-confirm2020-hrp-756": 0.04286637649072638,
+    "alt-etf-confirm2020-pcc-hub-avoid-cvar": 0.042613823779842366,
+    "alt-etf-confirm2020-partial-hub-avoid-cvar": 0.046433763302696
+  },
+  "best_run_id": "alt-etf-confirm2020-dynamic-seed7",
+  "result": {
+    "observations": 1610,
+    "trials": 13,
+    "observed_periodic_sharpe": 0.05034102704745928,
+    "expected_max_trial_sharpe": 0.049536391320594786,
+    "deflated_sharpe_probability": 0.5126134377414862
+  },
+  "warning": "The trial set must be the complete search family. This diagnostic addresses configuration mining only; it is not an untouched outer test."
+}

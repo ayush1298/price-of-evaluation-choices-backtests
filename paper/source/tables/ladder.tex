@@ -1,0 +1,31 @@
+\begin{table}[t]
+\centering
+\caption{Every proposed candidate, its matched comparator, and the one-sided
+paired moving-block $p$-value for a positive advantage. The final three rows
+are the same model, which beats both of its own ablations and still loses
+to equal weight. Thirteen tests cover nine candidates. The
+information-coefficient objective appears on two panels, the HMM entry appears with
+and without its search correction, and the dynamic model is tested against two
+ablations and one baseline. All rows resolve to manifest-backed runs (Section 3).}
+\label{tab:ladder}
+\footnotesize
+\begin{tabular}{llr}
+\toprule
+Candidate & Compared against & $p$ \\
+\midrule
+Soft-regime cond.\ covariance & matched uncond.\ risk & $0.909$ \\
+HMM cond.\ risk (2, 252) & matched HRP-756 & $0.359$ \\
+\quad same, corrected for the 9-cell search & matched HRP-756 & $0.680$ \\
+Group-aware cond.\ covariance & matched global-HMM risk & $0.732$ \\
+Edge-masked graph attention & similarity passing & $0.474$ \\
+IC training objective (US) & likelihood-only & $0.298$ \\
+IC training objective (India) & likelihood-only & $0.998$ \\
+Probability-gated regime experts & regime-free model & $0.719$ \\
+Direct probability concat. & regime-free model & $0.519$ \\
+VIX-conditioned regime model & regime-free model & $0.717$ \\
+Dynamic graph-temporal, full & own graph-only ablation & $0.007$ \\
+\quad same & own temporal-only abl. & $0.023$ \\
+\quad same & equal weight & $0.705$ \\
+\bottomrule
+\end{tabular}
+\end{table}
